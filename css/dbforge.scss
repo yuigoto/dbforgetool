@@ -1,0 +1,310 @@
+@mixin transition() {
+    transition: all .3s ease;
+}
+
+@mixin border_radius() {
+    border-radius: 4px;
+}
+
+* {
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+#dbforge-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+}
+
+#dbforge-name {
+    color: #babdb6;
+    border-bottom: 1px solid #babdb6;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0 0 .5rem;
+    
+    @media ( max-width: 42rem ) {
+        font-size: 1.5rem;
+    }
+}
+
+#dbforge-main {
+}
+
+#dbforge-form {
+    input[type=text], 
+    select {
+        border: 1px solid #d3d7cf;
+        width: 100%;
+        height: 2rem;
+        font-size: .8rem;
+        line-height: 1.25;
+        margin: .5rem 0 0;
+        box-sizing: content-box;
+        @include border_radius;
+    }
+}
+
+#dbforge-list {
+    display: block;
+    
+    &:before, 
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+        box-sizing: border-box;
+    }
+    
+    & > li {
+        background: #fff;
+        width: 100%;
+        margin: auto;
+        padding: 0 10px .5rem 3rem;
+        display: block;
+        position: relative;
+        box-shadow: 0 0 .25rem 0 rgba( 0, 0, 0, .5 ) inset;
+        @include border_radius;
+        @include transition;
+        
+        &:hover {
+            background: #d3d7cf;
+        }
+        
+        ul {
+            width: 100%;
+            margin: 0 -10px 0;
+            padding: .5rem 0 0;
+            display: block;
+            
+            &:before, 
+            &:after {
+                content: "";
+                display: table;
+                clear: both;
+                box-sizing: border-box;
+            }
+            
+            li {
+                width: percentage( 1/2 );
+                font-size: .8rem;
+                line-height: 1.25;
+                margin: auto;
+                padding: .25rem 3rem .25rem .5rem;
+                display: block;
+                float: left;
+                position: relative;
+                @include border_radius;
+                
+                &:first-child {
+                    padding-right: .5rem;
+                }
+                
+                @media ( max-width: 24rem ) {
+                    width: 100%;
+                }
+            }
+        }
+                
+        @media ( min-width: 42rem ) {
+            border-top: 0 !important;
+            width: 50%;
+            margin: 0;
+            float: left;
+            
+            &:nth-child( odd ) {
+                clear: left;
+            }
+        }
+    }
+}
+
+#dbforge-plus, 
+#dbforge-send {
+    color: #fff;
+    background: #babdb6;
+    border: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 2;
+    margin: .25rem auto;
+    padding: 0;
+    display: block;
+    float: left;
+    clear: both;
+    cursor: pointer;
+    @include border_radius;
+    @include transition;
+    
+    &:hover {
+        background: #555753;
+    }
+}
+
+#dbforge-send {
+    background: #f57900;
+    
+    &:hover {
+        background: #ce5c00;
+    }
+}
+
+#dbforge-output {
+    width: 100%;
+    height: 6rem;
+    font-size: .8rem;
+    margin: .25rem auto;
+    padding: 0;
+    display: block;
+    float: left;
+    clear: both;
+    @include border_radius;
+    @include transition;
+}
+
+.dbforge-title {
+}
+
+.dbforge-placeholder {
+    color: #888a85;
+    background: #fff;
+    border: 2px dashed #ce5c00 !important;
+    width: 100%;
+    min-height: 2rem;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    opacity: .5;
+    
+    &:before {
+        content: "Drop item here to reorder";
+        display: block;
+    }
+}
+
+.dbforge-handle {
+    color: #fff;
+    background: #2e3436;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    cursor: pointer;
+    @include border_radius;
+    @include transition;
+        
+    &:after {
+        content: "Click + drag to sort this item";
+        color: #fff;
+        background: #555753;
+        width: 6rem;
+        max-height: 0;
+        font-size: .8rem;
+        margin: 0;
+        padding: 0 10px;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        z-index: 99;
+        opacity: 0;
+        overflow: hidden;
+        @include border_radius;
+        @include transition;
+    }
+        
+    &:before {
+        content: "";
+        border: 0;
+        width: 0;
+        height: 0;
+        font-size: .8rem;
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        position: absolute;
+        top: 90%;
+        left: .5rem;
+        z-index: 99;
+        opacity: 0;
+        @include transition;
+    }
+    
+    &:hover {
+        background: #555753;
+        
+        &:after {
+            max-height: 20rem;
+            padding: 10px;
+            opacity: 1;
+            top: 120%;
+        }
+        
+        &:before {
+            border-bottom: 10px solid #555753;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            opacity: 1;
+            top: 100%;
+        }
+    }
+}
+
+.dbforge-delete {
+    color: #fff;
+    background: #2e3436;
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    top: 3rem;
+    left: .5rem;
+    cursor: pointer;
+    @include border_radius;
+    @include transition;
+    
+    &:hover {
+        background: #555753;
+    }
+}
+
+.dbforge-subs-delete {
+    color: #fff;
+    background: #2e3436;
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    bottom: .25rem;
+    right: .5rem;
+    cursor: pointer;
+    @include border_radius;
+    @include transition;
+    
+    &:hover {
+        background: #555753;
+    }
+}

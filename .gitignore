@@ -1,0 +1,11 @@
+# Folders
+.vscode/
+review/
+node_modules/
+
+# Files
+.project
+gulpfile.js
+
+# Project files, i.e. `.brackets` should NOT be excluded as they contain 
+# compiler settings and other important information for Brackets editor.
