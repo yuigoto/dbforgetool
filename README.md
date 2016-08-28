@@ -43,6 +43,12 @@ By doing this, you'll have an array containing some nested arrays and values. Ea
 
 -----
 
+#### Example CodeIgniter Model
+
+I've written a simple Gist, containing a dummy model to exemplify how you'd use this class, you can find it here: [https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15](https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15)
+
+-----
+
 ## License
 
 This project is licensed under the terms of the `MIT License`. Please refer to the `LICENSE.md` file for details on it.
