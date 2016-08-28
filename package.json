@@ -1,0 +1,14 @@
+{
+    "name"          : "DBForge Tool", 
+    "main"          : "index.html", 
+    "window"        : {
+        "title"         : "DBForge Tool | v0.1.0", 
+        "toolbar"       : false, 
+        "fullscreen"    : false, 
+        "width"         : 360, 
+        "height"        : 480, 
+        "resizable"     : false, 
+        "transparent"   : false
+    }, 
+    "nodejs"        : true
+}

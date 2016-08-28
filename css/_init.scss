@@ -1,0 +1,760 @@
+/**
+ * DBForge Tool :: SCSS :: Init
+ * ======================================================================
+ * CSS Reset and Normalization.
+ * ----------------------------------------------------------------------
+ * 
+ */
+
+/* Globals
+ * ------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+[hidden], 
+.hidden {
+    display: none;
+}
+
+
+/* Base HTML
+ * ------------------------------------------------------------------- */
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+html {
+    overflow: auto;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Gidolinya', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    // Browser specific font-smoothing, for consistency
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+iframe {
+    border: 0;
+}
+
+main {
+    display: block;
+}
+
+hr {
+    background: #ccc;
+    border: 0;
+    width: 80%;
+    height: 1px;
+    margin: 10px auto;
+    display: block;
+    clear: both;
+}
+
+
+/* Headings
+ * ------------------------------------------------------------------- */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+h5, 
+h6 {
+    font-weight: 400;
+}
+
+h1 { font-size: 2.0rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.0rem; }
+
+
+/* Basic Typography
+ * ------------------------------------------------------------------- */
+* + h1, 
+* + h2, 
+* + h3, 
+* + h4, 
+* + h5, 
+* + h6, 
+* + p {
+    margin-top: .4rem;
+}
+
+p {
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em {
+    font-style: oblique;
+}
+
+b, 
+strong {
+    font-weight: 700;
+}
+
+small {
+    // Font-size should be relative to parent element
+    font-size: 80%;
+}
+
+sup, 
+sub {
+    // Font-size should be relative to parent element
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    vertical-align: baseline;
+    // Position top is relative to current font-size
+    top: -.5em;
+}
+
+code {
+    color: #222;
+    background: #eee;
+    font-family: 'Iosevka Term', 'Input', monospace;
+    white-space: normal;
+    padding: 0;
+}
+
+pre {
+    @extend code;
+    border: 1px solid #aaa;
+    line-height: 2;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: .5rem;
+    padding: 0 .5rem;
+    
+    code {
+        color: inherit;
+        background: transparent;
+        padding: 0;
+    }
+}
+
+cite {
+    color: #555;
+    font-style: oblique;
+    
+    a {
+        color: #222;
+        font-weight: 700;
+        
+        &:hover {
+            color: #999;
+        }
+    }
+}
+
+kbd {
+    color: #444;
+    background: #ddd;
+    border: 1px solid;
+    border-bottom-width: 4px;
+    font-family: 'Iosevka Term', 'Input', monospace;
+    line-height: 2;
+    padding: .25rem .75rem;
+    display: inline;
+    position: relative;
+    top: -2px;
+    border-radius: 5px;
+    transition: .3s;
+    
+    &:hover {
+        background: #eee;
+        border-bottom-width: 1px;
+        top: 2px;
+    }
+}
+
+abbr {
+    border-bottom: 1px dotted #bbb;
+}
+
+blockquote {
+    padding: .5rem 0;
+    
+    p {
+        font-size: 140%;
+        font-style: oblique;
+    }
+    
+    cite {
+        color: #888;
+        font-size: 80%;
+        font-weight: 700;
+        font-style: normal;
+        margin-top: 1rem;
+        display: block;
+    }
+}
+
+
+/* Extended Typography
+ * ------------------------------------------------------------------- */
+// Forces a normal weight and oblique text style (for subtitles and captions)
+.subs {
+    font-weight: 400;
+    font-style: oblique;
+}
+
+// Forces a solid border-bottom of 1px
+.line {
+    border-bottom: 1px solid;
+}
+
+// Forces LTR text (when inside an RTL element)
+.ltr {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+}
+
+// Adds RTL text support to an element
+.rtl {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+// Forces text-align to left
+.text-left {
+    text-align: left;
+}
+
+// Forces text-align to right
+.text-right {
+    text-align: right;
+}
+
+// Forces text-align to center
+.text-center {
+    text-align: center;
+}
+
+// Forces text-align to justify
+.text-justify {
+    text-align: justify;
+}
+
+// Forces border-top
+.border-top {
+    border-top: 1px solid;
+}
+
+// Forces border-left
+.border-left {
+    border-left: 1px solid;
+}
+
+// Forces border-right
+.border-right {
+    border-right: 1px solid;
+}
+
+// Forces border-bottom
+.border-bottom {
+    border-bottom: 1px solid;
+}
+s
+/**
+ * This fixes the floating nested divs not affecting container height problem. 
+ * It's placed here temporarily as a lazy solution to make it work properly.
+ * Location shall be changed in the future.
+ */
+.clearfix {
+    &:before, 
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+        box-sizing: border-box;
+    }
+}
+
+
+/* Figure and images
+ * ------------------------------------------------------------------- */
+figure {
+    margin: 0;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+/* Lists: ordered and unordered
+ * ------------------------------------------------------------------- */    
+li {
+    line-height: inherit;
+    display: list-item;
+    
+    & + li {
+        margin-top: .25rem;
+    }
+}
+
+ul, 
+ol {
+    line-height: 1.5;
+    list-style-position: inside;
+    margin: 10px;
+        
+    ul, 
+    ol {
+        padding-left: 1rem;
+        
+        ul { list-style-type: square; }
+        ol { list-style-type: lower-roman; }
+    }
+        
+    ul { list-style-type: circle; }
+    ol { list-style-type: lower-latin; }
+    
+    /* Unstyled lists
+     * --------------------------------------------------------------- */
+    &.unstyled {
+        list-style: none;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        
+        & > li {
+            line-height: 1;
+            display: block;
+            
+            & + li {
+                margin: 0;
+            }
+        }
+    }
+    
+    /* Inline lists
+     * --------------------------------------------------------------- */
+    &.inline {
+        line-height: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline;
+        
+        & > li {
+            line-height: 1;
+            display: inline;
+            
+            & + li {
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+/* Lists: definition lists
+ * ------------------------------------------------------------------- */
+dl {
+    width: 100%;
+    margin: 0 auto;
+    padding: .25rem 0;
+    display: block;
+    @extend .clearfix;
+}
+
+dt {
+    font-size: font_size( 16 );
+    font-weight: 700;
+    display: block;
+    clear: both;
+}
+
+* + dt {
+    margin-top: .75rem;
+}
+
+dd {
+    margin: auto;
+    display: block;
+}
+
+* + dd {
+    margin-top: .25rem;
+    
+    &:not(:last-of-type):after {
+        content: "";
+        background: rgba( 0, 0, 0, .25 );
+        width: 100%;
+        height: 1px;
+        margin: .75rem auto .25rem;
+        display: block;
+        clear: both;
+    }
+}
+
+@media ( min-width: 42rem ) {
+    dt {
+        width: 25%;
+        text-align: right;
+        margin: auto;
+        padding: 0 .75rem 0 0;
+        float: left;
+        clear: none;
+    }
+    
+    dd {
+        margin: auto;
+    }
+}
+
+
+/* Tables
+ * ------------------------------------------------------------------- */
+table {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    margin: 10px;
+    
+    /* Caption
+     * --------------------------------------------------------------- */
+    caption {
+        color: #aaa;
+        border-bottom: 1px solid #aaa;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: .25rem;
+    }
+    
+    /* Table head
+     * --------------------------------------------------------------- */
+    thead {
+        color: #444;
+        background: #ddd;
+        border-bottom: 1px solid #aaa;
+        font-weight: 700;
+    }
+    
+    /* Table foot
+     * --------------------------------------------------------------- */
+    tfoot {
+        color: #fff;
+        background: #ccc;
+        border-top: 1px solid #aaa;
+        
+        td {
+            text-align: center;
+        }
+    }
+    
+    /* Cells
+     * --------------------------------------------------------------- */
+    th, 
+    td {
+        border-left: 1px solid #aaa;
+        border-right: 1px solid #aaa;
+        padding: .25rem;
+    }
+    
+    /* Styled :: Globals (Horizontal and Border)
+     * --------------------------------------------------------------- */
+    &.border, 
+    &.horizontal {
+        tr {
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+        }
+    }
+    
+    /* Styled :: Horizontal
+     * --------------------------------------------------------------- */
+    &.horizontal {
+        th, 
+        td {
+            border: 0;
+        }
+    }
+    
+    /* Styled :: Striped
+     * --------------------------------------------------------------- */
+    &.stripe {
+        tr, 
+        th, 
+        td {
+            &:nth-child( even ) {
+                background: rgba( 0, 0, 0, .1 );
+            }
+        }
+    }
+    
+    /* Unstyled table
+     * --------------------------------------------------------------- */
+    &.unstyled {
+        border: 0;
+        text-align: left;
+        line-height: 1;
+        margin: 0;
+        
+        // Resetting all styles
+        caption, 
+        thead, 
+        tbody, 
+        tfoot, 
+        tr, 
+        td, 
+        th {
+            color: inherit;
+            background: inherit;
+            border: inherit;
+            font-weight: inherit;
+            font-style: inherit;
+            text-align: inherit;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+
+/* Forms
+ * ------------------------------------------------------------------- */
+form, 
+fieldset {
+    @extend .clearfix;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    clear: both;
+    
+    & + fieldset {
+        border-top: 1px dotted #ccc;
+    }
+}
+
+legend {
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 auto .5rem;
+    display: block;
+    // Prevents fieldset border to pass through
+    float: left;
+    clear: both;
+}
+
+label {
+    line-height: 2;
+    vertical-align: middle;
+    margin: .5rem auto;
+    display: inline-block;
+    clear: both;
+    
+    &.required {
+        &:after {
+            content: "*";
+        }
+    }
+    
+    // Special label-type for checkboxes and radio buttons
+    &.checkbox, 
+    &.radio {
+        margin: 0;
+        padding: 0 .5rem;
+        cursor: pointer;
+        transition: .3s;
+        
+        &:hover {
+            color: #888;
+            background: #eee;
+        }
+    }
+}
+
+// Field globals
+input, 
+select, 
+textarea, 
+button {
+    position: relative;
+    z-index: 1;
+}
+
+/**
+ * This is a local placeholder class.
+ * 
+ * It predefines some generic styling for form inputs, but it's not used on all 
+ * input types.
+ */
+%form-inputs {
+    color: #000;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: content-box;
+    min-height: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    text-indent: .25rem;
+    line-height: 2;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    
+    // Disabled input properties
+    &[disabled] {
+        color: #bbb;
+        background: #fff;
+        cursor: not-allowed;
+    }
+    
+    // Required input properties
+    &[required] {
+        border-color: #f00;
+    }
+    
+    // Read-only input properties
+    &[readonly] {
+        background: #ddd;
+        cursor: default;
+    }
+    
+    // Focus styling
+    &:focus {
+        border-color: #999;
+        outline: 0;
+    }
+}
+
+// Input
+input {
+    /**
+     * This big lump of code excludes: radio, checkbox, submit, reset, button 
+     * and file type inputs.
+     * 
+     * Sorry for the long line of code, as it was the smalles I could think of.
+     */
+    &:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=reset]):not([type=button]):not([type=file]) {
+        @extend %form-inputs;
+    }
+    
+    // File input
+    &[type=file] {
+        color: #000;
+        background: #fff;
+        min-height: 2rem;
+        font-family: inherit;
+        font-size: 1rem;
+        line-height: 2;
+        vertical-align: middle;
+        margin: auto;
+        padding: 0 .25rem;
+    }
+    
+    // Checkbox and radio
+    &[type=checkbox], 
+    &[type=radio] {
+        vertical-align: middle;
+    }
+}
+
+// Select boxes
+select {
+    @extend %form-inputs;
+    
+    &[multiple] {
+        min-height: 6rem;
+    }
+}
+
+// Textarea
+textarea {
+    @extend %form-inputs;
+    min-height: 10rem;
+    line-height: 1.25;
+}
+
+// Buttons and submits
+input[type=submit], 
+input[type=reset], 
+input[type=button], 
+button {
+    background: #ddd;
+    border: 0;
+    box-sizing: border-box;
+    width: auto;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    text-align: center;
+    text-transform: inherit;
+    line-height: 2;
+    letter-spacing: inherit;
+    vertical-align: middle;
+    margin: 0;
+    padding: .25rem .75rem;
+    display: inline-block;
+    clear: both;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    transition: color .3s, background .3s;;
+    
+    &:hover {
+        color: #fff;
+        background: #bbb;
+    }
+    
+    &:disabled {
+        color: #ccc;
+        background: transparent;
+    }
+}
+
+
+/* Firefox bugfix
+ * ------------------------------------------------------------------- */
+// Patch for https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

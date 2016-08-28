@@ -2,6 +2,7 @@
 .vscode/
 review/
 node_modules/
+old/
 
 # Files
 .project
