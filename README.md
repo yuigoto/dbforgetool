@@ -1,9 +1,7 @@
-DBForge Tool
-============
-_A simple tool built to help make field arrays for use in DBForge, on CodeIgniter projects_
+YX : JS : DBForge Tool
+======================
 
-
-## About the tool
+> A simple tool built to help make field arrays for use in DBForge, on CodeIgniter projects.
 
 **DBForge Tool** is a **NW.js** based tool built to help create table arrays to be used with the `database forge (dbforge)` module on CodeIgniter. In essence, it just helps you build the fields array used when creating a table.
 
@@ -12,8 +10,6 @@ The reason I built this tool is because some code started to become **really** m
 Bear in mind that I'm not a great coder, and this is just a simple tool built to my own needs, so things might require some extra coding for other solutions. The source code is commented as much as possible, but I might have left some things uncommented.
 
 Use this at your own risk! :sweat_smile::sweat_drops:
-
------
 
 ## How to Use
 
@@ -41,26 +37,22 @@ By doing this, you'll have an array containing some nested arrays and values. Ea
 - **'title'**: a string containing the field name;
 - **'value'**: an associative array with the field data values;
 
------
-
-#### Example CodeIgniter Model
+## Example CodeIgniter Model
 
 I've written a simple Gist, containing a dummy model to exemplify how you'd use this class, you can find it here: [https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15](https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15)
 
------
+## Authors
+
+- **Fabio Y. Goto** ([lab@yuiti.com.br][mailto01]);
 
 ## License
 
-This project is licensed under the terms of the `MIT License`. Please refer to the `LICENSE.md` file for details on it.
+The code/logic in this repo is distributed under the `MIT License`, plase check the `LICENSE.md` file.
 
+_© 2016 Fabio Y. Goto_
 
+[\\]: ======================================================================
 
-## Authors
+[mailto01]: mailto:lab@yuiti.com.br
 
- * **Fabio Y. Goto** - _code, layout_
-
------
-
-<small>
-**_&copy;2016 SIXSIDED Developments_**
-</small>
+[\\]: ======================================================================
