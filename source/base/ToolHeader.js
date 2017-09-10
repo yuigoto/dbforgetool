@@ -118,7 +118,7 @@ export default class ToolHeader extends Component {
             );
     
             return (
-                <header>
+                <header className="tool__head">
                     <h3>DBForge Tool</h3>
                     <p>by Fabio Y. Goto</p>
             
@@ -131,4 +131,3 @@ export default class ToolHeader extends Component {
         }
     }
 }
-

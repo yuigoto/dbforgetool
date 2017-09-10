@@ -11,6 +11,7 @@
 import React, { Component } from "react";
 
 // Import local modules
+import Column from "Components/Column";
 import Blueprints from "Helper/Blueprints";
 import Stacks from "Helper/Stacks";
 
@@ -94,6 +95,17 @@ export default class Edit extends Component {
         this.setState(curr);
     }
     
+    addColumn() {
+        // State alias
+        let curr = this.state;
+        
+        // Push new item
+        curr.data.columns.push(Blueprints.generateBlankColumn());
+        
+        // Update state
+        this.setState(curr);
+    }
+    
     /**
      * Saves the current blueprint to local storage.
      */
@@ -157,11 +169,31 @@ export default class Edit extends Component {
             </div>
         );
         
+        let column_list = [];
+        
+        if (state.data.columns.length > 0) {
+            for (var i in state.data.columns) {
+                column_list.push(
+                    <Column key={i} column={state.data.columns[i]} />
+                );
+            }
+        } else {
+            column_list.push(
+                <div key="no-column">
+                    <p>There's absolutely no column in here, dude.</p>
+                </div>
+            );
+        }
+        
         return (
             <div className="tool__home">
                 {alerts}
                 {title}
                 <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                {column_list}
+                <button onClick={this.addColumn.bind(this)}>
+                    Add Column
+                </button>
                 <button onClick={this.save.bind(this)}>
                     Save
                 </button>

@@ -9,6 +9,7 @@
 
 // Import libraries
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 // Import local modules
 import Stacks from "Helper/Stacks";
@@ -48,10 +49,11 @@ export default class Load extends Component {
             for (var n in blueprints) {
                 // Item alias
                 let item = blueprints[n];
+                let link = "/edit/" + item.id;
                 
                 // Push
                 item_list = (
-                    <p>{item.name}</p>
+                    <Link to={link}>{item.name}</Link>
                 );
             }
         } else {
