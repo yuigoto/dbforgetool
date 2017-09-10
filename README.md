@@ -1,45 +1,38 @@
 YX : JS : DBForge Tool
 ======================
 
-> A simple tool built to help make field arrays for use in DBForge, on CodeIgniter projects.
+> The new version of DBForge Tool, written as a React based application.
 
-**DBForge Tool** is a **NW.js** based tool built to help create table arrays to be used with the `database forge (dbforge)` module on CodeIgniter. In essence, it just helps you build the fields array used when creating a table.
+## Dependencies
 
-The reason I built this tool is because some code started to become **really** massive on some models to me (specially when I was using more than 4 tables), so I wanted a solution that would lessen the number of lines in the code and, also, let me backup all the table layouts into files (so I could just copy/paste'em, load and rebuild the tables whenever I wanted).
+You'll need `node v6.9.x +` and `npm v3.10.x+` to be able to install, run and build this project.
 
-Bear in mind that I'm not a great coder, and this is just a simple tool built to my own needs, so things might require some extra coding for other solutions. The source code is commented as much as possible, but I might have left some things uncommented.
+Having both installed, use a console/terminal to navigate to the repository folder and run `npm install` to install all dependencies.
 
-Use this at your own risk! :sweat_smile::sweat_drops:
+You'll also need to globally install `http-server` for local testing and `webpack` for command line use.
 
-## How to Use
+#### Global Dependencies
+- `http-server` _0.10.0_;
+- `webpack` _3.5.5._;
 
-You should use the binary release or run the source code with **NW.js/Node Webkit**. You can just run this as a web app, but you won't be able to save the generated data in a file.
+#### Dependencies
 
-When opening the app, you're presented with this screen:
+- `react` _v15.6.1_;
+- `react-dom` _v15.6.1;
 
-|Screen|Description|
-|------|-----------|
-|![Screen 01](assets-readme/scr-01.png)|When you open the application, you're presented with this screen. Clicking on the "?" button opens the "About" panel.|
-|![Screen 02](assets-readme/scr-02.png)|Clicking on the "Add Field" button, adds a single field entity for the database, every field starts minimized. You can click on the field's name and drag it to sort them (recommended doing it with the field minimized), the "X" button to delete the field or expand the field to fill the details on it.<br>The field name and type are always required, but the other fields aren't, so you can just delete'em if you want (you can't add'em later, so carefully think about it, as you'll have to add another field).|
-|![Screen 03](assets-readme/scr-03.png)|After filling the field data, you can click on the "Generate" button, which brings you to this screen. You can save the generated JSON data as a file (just a simple text file with the "dbforge" extension) and you can also click on the textarea to select everything and copy it.|
+#### Development Dependencies
 
-After you've generated the code, this is an example implementation of what you can do with it:
+- `babel` _6.26.0_;
+- `babel-loader` _7.1.2_;
+- `babel-preset-react` _6.24.1_;
+- `webpack` _3.5.5_ (needs to be installed **both** globally and locally);
 
-```php
-// Reading the content
-$file = file_get_contents( "data.dbforge" );
+## Building and Watching
 
-// Decode the JSON into an associative array
-$file = json_decode( $file, true );
-```
+Once you've got everything properly installed, you can use both commands below to build/watch and test the project on localhost:
 
-By doing this, you'll have an array containing some nested arrays and values. Each array has:
-- **'title'**: a string containing the field name;
-- **'value'**: an associative array with the field data values;
-
-## Example CodeIgniter Model
-
-I've written a simple Gist, containing a dummy model to exemplify how you'd use this class, you can find it here: [https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15](https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15)
+- `npm run watch` fires the webpack builder and watcher;
+- `npm run serve` enables you to test the project by pointing to `http://localhost:32`;
 
 ## Authors
 
@@ -47,12 +40,10 @@ I've written a simple Gist, containing a dummy model to exemplify how you'd use 
 
 ## License
 
-The code/logic in this repo is distributed under the `MIT License`, plase check the `LICENSE.md` file.
+This project is licensed under the `MIT License`. Please check the `LICENSE.md` file for more details.
 
-_© 2016 Fabio Y. Goto_
+-----
 
-[\\]: ======================================================================
+_© 2017 Fabio Y. Goto_
 
 [mailto01]: mailto:lab@yuiti.com.br
-
-[\\]: ======================================================================

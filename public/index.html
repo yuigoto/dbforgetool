@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DBForge Tool</title>
+    <style>
+        .tool__info,
+        .tool__alerts,
+        .tool__alerts.out {
+            max-height: 0;
+            background: #391;
+            padding: 0;
+            display: block;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .3s;
+        }
+
+        .tool__info.in,
+        .tool__alerts.in {
+            max-height: 1280px;
+            padding: 10px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- APP : START -->
+    <div id="tool"></div>
+    <!-- APP : END -->
+
+    <!-- JAVASCRIPT -->
+    <script src="/bundle.js"></script>
+</body>
+</html>
