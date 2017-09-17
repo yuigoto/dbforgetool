@@ -8,6 +8,8 @@
  * @copyright   (c) 2017 Fabio Y. Goto
  */
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 // Require libraries
 path = require("path");
 
@@ -35,6 +37,7 @@ module.exports = {
             Base: path.resolve(__dirname, "source/base"), 
             Page: path.resolve(__dirname, "source/page"),
             Helper: path.resolve(__dirname, "source/helper"),
+            Routes: path.resolve(__dirname, "source/routes"),
             Components: path.resolve(__dirname, "source/components")
         }
     }

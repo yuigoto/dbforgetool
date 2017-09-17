@@ -1,24 +1,20 @@
 /**
  * DBFORGE TOOL : Base/Tool
  * ======================================================================
- * Main application wrapper.
+ * Application main component, acts as a wrapper for header, footer and the
+ * application sections.
  * ----------------------------------------------------------------------
  * @author      Fabio Y. Goto <lab@yuiti.com.br>
  * @since       3.0.0
  */
-// Import libraries
+// Import base modules
 import React, { Component } from "react";
-import { BrowserRouter, HashRouter, Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 
-// Import local modules
-import Header from "Base/ToolHeader";
-import Footer from "Base/ToolFooter";
-
-// Import pages
+// Import application components
+import { AppRoute } from "Routes/Routes";
 import Home from "Page/Home";
-import Demo from "Page/Demo";
 import Edit from "Page/Edit";
-import Load from "Page/Load";
 
 // Main component class
 export default class Tool extends Component {
@@ -26,40 +22,59 @@ export default class Tool extends Component {
      * Component constructor.
      *
      * @param {object} props
+     *      Component properties object
      */
     constructor(props) {
-        // Always call super first!
+        // Call super constructor
         super(props);
         
-        // Bootstrap component state
+        // Set initial state
         this.state = {};
+        
+        // Application routes
+        this.routes = [
+            {
+                path: "/",
+                exact: true
+            }
+        ];
+    
+        // Define home menu routes
+        this.routes = AppRoute;
+        console.log(this.routes);
+    }
+    
+    /**
+     * Callback used to handle routes, when mapping the array.
+     *
+     * @param {object} route
+     *      Route data object
+     * @param {integer} index
+     *      Route unique index
+     * @returns {XML}
+     */
+    routesHandle(route, index) {
+        return (
+            <Route key={index}
+                   path={route.path}
+                   exact={route.exact}
+                   component={route.component}/>
+        );
     }
     
     /**
      * Renders the component.
      *
-     * I'm using two `BrowseRouter` components here because I need some
-     * conditional stuff to happen on the header, depending on the page
+     * @returns {XML}
      */
     render() {
+        // Mapping routes to components
+        let routes = this.routes.map(this.routesHandle);
+        
+        // Render the component
         return (
-            <div className="tool__main">
-                <BrowserRouter>
-                    <div>
-                        <Route path="/edit" component={Header}/>
-                        <Route path="/edit/:blueprint_id?" component={Edit}/>
-                        
-                        <Route path="/load" component={Header}/>
-                        <Route path="/load" component={Load}/>
-                        
-                        <Route path="/demo" component={Header}/>
-                        <Route path="/demo/:blueprint_id?" component={Demo}/>
-                        
-                        <Route exact path="/" component={Header}/>
-                        <Route exact path="/" component={Home}/>
-                    </div>
-                </BrowserRouter>
-                <Footer />
+            <div className="tool__wrap">
+                {routes}
             </div>
         );
     }

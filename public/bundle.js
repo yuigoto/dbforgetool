@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 104);
+/******/ 	return __webpack_require__(__webpack_require__.s = 106);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -435,16 +435,6 @@ module.exports = reactProdInvariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-module.exports = __webpack_require__(20);
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -538,7 +528,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -737,6 +727,16 @@ var ReactDOMComponentTree = {
 
 module.exports = ReactDOMComponentTree;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(20);
+
 
 /***/ }),
 /* 7 */
@@ -1299,7 +1299,7 @@ module.exports = emptyFunction;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(130);
+  var ReactDebugTool = __webpack_require__(132);
   debugTool = ReactDebugTool;
 }
 
@@ -1338,7 +1338,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(207)();
+  module.exports = __webpack_require__(208)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1454,7 +1454,7 @@ module.exports = ReactCurrentOwner;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(75);
 var PooledClass = __webpack_require__(19);
@@ -1710,7 +1710,7 @@ module.exports = ReactUpdates;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(19);
 
@@ -2197,7 +2197,7 @@ module.exports = DOMProperty;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(14);
 
@@ -2662,24 +2662,24 @@ module.exports = PooledClass;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var ReactBaseClasses = __webpack_require__(64);
-var ReactChildren = __webpack_require__(105);
-var ReactDOMFactories = __webpack_require__(109);
+var ReactChildren = __webpack_require__(107);
+var ReactDOMFactories = __webpack_require__(111);
 var ReactElement = __webpack_require__(18);
-var ReactPropTypes = __webpack_require__(113);
-var ReactVersion = __webpack_require__(115);
+var ReactPropTypes = __webpack_require__(115);
+var ReactVersion = __webpack_require__(117);
 
-var createReactClass = __webpack_require__(116);
-var onlyChild = __webpack_require__(118);
+var createReactClass = __webpack_require__(118);
+var onlyChild = __webpack_require__(120);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
 var cloneElement = ReactElement.cloneElement;
 
 if (process.env.NODE_ENV !== 'production') {
-  var lowPriorityWarning = __webpack_require__(39);
+  var lowPriorityWarning = __webpack_require__(40);
   var canDefineProperty = __webpack_require__(30);
   var ReactElementValidator = __webpack_require__(68);
   var didWarnPropTypesDeprecated = false;
@@ -2844,7 +2844,7 @@ module.exports = reactProdInvariant;
 
 
 
-var ReactRef = __webpack_require__(128);
+var ReactRef = __webpack_require__(130);
 var ReactInstrumentation = __webpack_require__(11);
 
 var warning = __webpack_require__(2);
@@ -3016,10 +3016,10 @@ module.exports = ReactReconciler;
 
 
 
-var DOMNamespaces = __webpack_require__(47);
+var DOMNamespaces = __webpack_require__(48);
 var setInnerHTML = __webpack_require__(35);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(48);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
 var setTextContent = __webpack_require__(80);
 
 var ELEMENT_NODE_TYPE = 1;
@@ -3140,7 +3140,7 @@ module.exports = DOMLazyTree;
 
 
 var EventPluginHub = __webpack_require__(25);
-var EventPluginUtils = __webpack_require__(41);
+var EventPluginUtils = __webpack_require__(42);
 
 var accumulateInto = __webpack_require__(72);
 var forEachAccumulated = __webpack_require__(73);
@@ -3282,8 +3282,8 @@ module.exports = EventPropagators;
 var _prodInvariant = __webpack_require__(3);
 
 var EventPluginRegistry = __webpack_require__(32);
-var EventPluginUtils = __webpack_require__(41);
-var ReactErrorUtils = __webpack_require__(42);
+var EventPluginUtils = __webpack_require__(42);
+var ReactErrorUtils = __webpack_require__(43);
 
 var accumulateInto = __webpack_require__(72);
 var forEachAccumulated = __webpack_require__(73);
@@ -3561,7 +3561,7 @@ module.exports = EventPluginHub;
 
 var SyntheticEvent = __webpack_require__(16);
 
-var getEventTarget = __webpack_require__(43);
+var getEventTarget = __webpack_require__(44);
 
 /**
  * @interface UIEvent
@@ -4366,7 +4366,7 @@ module.exports = TransactionImpl;
 var SyntheticUIEvent = __webpack_require__(26);
 var ViewportMetrics = __webpack_require__(79);
 
-var getEventModifierState = __webpack_require__(45);
+var getEventModifierState = __webpack_require__(46);
 
 /**
  * @interface MouseEvent
@@ -4441,12 +4441,12 @@ module.exports = SyntheticMouseEvent;
 
 
 var ExecutionEnvironment = __webpack_require__(7);
-var DOMNamespaces = __webpack_require__(47);
+var DOMNamespaces = __webpack_require__(48);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(48);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
 
 // SVG temp container for IE lacking innerHTML
 var reusableSVGContainer;
@@ -4670,14 +4670,14 @@ module.exports = escapeTextContentForBrowser;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var EventPluginRegistry = __webpack_require__(32);
-var ReactEventEmitterMixin = __webpack_require__(154);
+var ReactEventEmitterMixin = __webpack_require__(156);
 var ViewportMetrics = __webpack_require__(79);
 
-var getVendorPrefixedEventName = __webpack_require__(155);
-var isEventSupported = __webpack_require__(44);
+var getVendorPrefixedEventName = __webpack_require__(157);
+var isEventSupported = __webpack_require__(45);
 
 /**
  * Summary of `ReactBrowserEventEmitter` event handling:
@@ -4987,6 +4987,65 @@ module.exports = ReactBrowserEventEmitter;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(207);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(210);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(99);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(212);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(215);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(218);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(220);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(100);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(60);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(226);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(228);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(230);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(231);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(96);
@@ -5059,7 +5118,7 @@ var locationsAreEqual = function locationsAreEqual(a, b) {
 };
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5130,7 +5189,7 @@ module.exports = lowPriorityWarning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5151,7 +5210,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5169,7 +5228,7 @@ module.exports = ReactPropTypesSecret;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactErrorUtils = __webpack_require__(42);
+var ReactErrorUtils = __webpack_require__(43);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -5383,7 +5442,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5465,7 +5524,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5505,7 +5564,7 @@ function getEventTarget(nativeEvent) {
 module.exports = getEventTarget;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5570,7 +5629,7 @@ function isEventSupported(eventNameSuffix, capture) {
 module.exports = isEventSupported;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5618,7 +5677,7 @@ function getEventModifierState(nativeEvent) {
 module.exports = getEventModifierState;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5635,11 +5694,11 @@ module.exports = getEventModifierState;
 
 
 var DOMLazyTree = __webpack_require__(23);
-var Danger = __webpack_require__(139);
-var ReactDOMComponentTree = __webpack_require__(6);
+var Danger = __webpack_require__(141);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(11);
 
-var createMicrosoftUnsafeLocalFunction = __webpack_require__(48);
+var createMicrosoftUnsafeLocalFunction = __webpack_require__(49);
 var setInnerHTML = __webpack_require__(35);
 var setTextContent = __webpack_require__(80);
 
@@ -5850,7 +5909,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5875,7 +5934,7 @@ var DOMNamespaces = {
 module.exports = DOMNamespaces;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5912,7 +5971,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6056,7 +6115,7 @@ module.exports = LinkedValueUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6106,7 +6165,7 @@ module.exports = ReactComponentEnvironment;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6179,7 +6238,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6226,7 +6285,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 module.exports = shouldUpdateReactComponent;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6290,7 +6349,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6530,7 +6589,7 @@ module.exports = ReactUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6546,7 +6605,7 @@ module.exports = ReactUpdateQueue;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var emptyFunction = __webpack_require__(10);
 var warning = __webpack_require__(2);
@@ -6907,7 +6966,7 @@ module.exports = validateDOMNesting;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6960,65 +7019,6 @@ function getEventCharCode(nativeEvent) {
 }
 
 module.exports = getEventCharCode;
-
-/***/ }),
-/* 57 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(206);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(209);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(99);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(211);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(214);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(217);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(219);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(100);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(60);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(225);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(227);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(229);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(230);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***/ }),
 /* 58 */
@@ -7215,7 +7215,7 @@ exports.default = createTransitionManager;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
@@ -7330,7 +7330,7 @@ Router.childContextTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -7505,14 +7505,14 @@ var createTransitionManager = function createTransitionManager() {
 
 
 var _prodInvariant = __webpack_require__(21),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
 var ReactNoopUpdateQueue = __webpack_require__(65);
 
 var canDefineProperty = __webpack_require__(30);
 var emptyObject = __webpack_require__(31);
 var invariant = __webpack_require__(1);
-var lowPriorityWarning = __webpack_require__(39);
+var lowPriorityWarning = __webpack_require__(40);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -7836,12 +7836,12 @@ var ReactCurrentOwner = __webpack_require__(14);
 var ReactComponentTreeHook = __webpack_require__(9);
 var ReactElement = __webpack_require__(18);
 
-var checkReactTypeSpec = __webpack_require__(110);
+var checkReactTypeSpec = __webpack_require__(112);
 
 var canDefineProperty = __webpack_require__(30);
 var getIteratorFn = __webpack_require__(67);
 var warning = __webpack_require__(2);
-var lowPriorityWarning = __webpack_require__(39);
+var lowPriorityWarning = __webpack_require__(40);
 
 function getDeclarationErrorAddendum() {
   if (ReactCurrentOwner.current) {
@@ -8117,8 +8117,8 @@ var emptyFunction = __webpack_require__(10);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
-var ReactPropTypesSecret = __webpack_require__(40);
-var checkPropTypes = __webpack_require__(114);
+var ReactPropTypesSecret = __webpack_require__(41);
+var checkPropTypes = __webpack_require__(116);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -8947,7 +8947,7 @@ module.exports = ReactFeatureFlags;
 
 
 
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 
 function isCheckable(elem) {
   var type = elem.type;
@@ -9410,10 +9410,10 @@ module.exports = CSSProperty;
 
 
 var DOMProperty = __webpack_require__(17);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstrumentation = __webpack_require__(11);
 
-var quoteAttributeValueForBrowser = __webpack_require__(153);
+var quoteAttributeValueForBrowser = __webpack_require__(155);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -9672,10 +9672,10 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(49);
-var ReactDOMComponentTree = __webpack_require__(6);
+var LinkedValueUtils = __webpack_require__(50);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(15);
 
 var warning = __webpack_require__(2);
@@ -9879,13 +9879,13 @@ module.exports = ReactDOMSelect;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
-var ReactCompositeComponent = __webpack_require__(161);
+var ReactCompositeComponent = __webpack_require__(163);
 var ReactEmptyComponent = __webpack_require__(88);
 var ReactHostComponent = __webpack_require__(89);
 
-var getNextDebugID = __webpack_require__(164);
+var getNextDebugID = __webpack_require__(166);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -10171,11 +10171,11 @@ module.exports = ReactHostComponent;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(14);
-var REACT_ELEMENT_TYPE = __webpack_require__(165);
+var REACT_ELEMENT_TYPE = __webpack_require__(167);
 
-var getIteratorFn = __webpack_require__(166);
+var getIteratorFn = __webpack_require__(168);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(53);
+var KeyEscapeUtils = __webpack_require__(54);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -10433,9 +10433,9 @@ module.exports = EventListener;
 
 
 
-var ReactDOMSelection = __webpack_require__(178);
+var ReactDOMSelection = __webpack_require__(180);
 
-var containsNode = __webpack_require__(180);
+var containsNode = __webpack_require__(182);
 var focusNode = __webpack_require__(81);
 var getActiveElement = __webpack_require__(93);
 
@@ -10612,22 +10612,22 @@ var DOMProperty = __webpack_require__(17);
 var React = __webpack_require__(20);
 var ReactBrowserEventEmitter = __webpack_require__(37);
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMContainerInfo = __webpack_require__(195);
-var ReactDOMFeatureFlags = __webpack_require__(196);
+var ReactDOMComponentTree = __webpack_require__(5);
+var ReactDOMContainerInfo = __webpack_require__(197);
+var ReactDOMFeatureFlags = __webpack_require__(198);
 var ReactFeatureFlags = __webpack_require__(76);
 var ReactInstanceMap = __webpack_require__(27);
 var ReactInstrumentation = __webpack_require__(11);
-var ReactMarkupChecksum = __webpack_require__(197);
+var ReactMarkupChecksum = __webpack_require__(199);
 var ReactReconciler = __webpack_require__(22);
-var ReactUpdateQueue = __webpack_require__(54);
+var ReactUpdateQueue = __webpack_require__(55);
 var ReactUpdates = __webpack_require__(15);
 
 var emptyObject = __webpack_require__(31);
 var instantiateReactComponent = __webpack_require__(86);
 var invariant = __webpack_require__(1);
 var setInnerHTML = __webpack_require__(35);
-var shouldUpdateReactComponent = __webpack_require__(52);
+var shouldUpdateReactComponent = __webpack_require__(53);
 var warning = __webpack_require__(2);
 
 var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -11355,7 +11355,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -11480,7 +11480,7 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
@@ -11699,310 +11699,92 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _LinkButton = __webpack_require__(104);
+
+var _LinkButton2 = _interopRequireDefault(_LinkButton);
+
+var _TextInput = __webpack_require__(236);
+
+var _TextInput2 = _interopRequireDefault(_TextInput);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/**
- * DBFORGE TOOL : Helper/Stacks
- * ======================================================================
- * Helper class for managing the local storage.
- * ----------------------------------------------------------------------
- * @author      Fabio Y. Goto <lab@yuiti.com.br>
- * @since       3.0.0
- */
-var Stacks = function () {
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Page/Home
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Home page component.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+// Import base modules
+
+
+// Import application components
+
+
+// Main component class
+var Home = function (_Component) {
+    _inherits(Home, _Component);
+
     /**
-     * Constructor.
+     * Component constructor.
      *
-     * @param {string} name
-     *      Name for the local storage position where the blueprint data will
-     *      be stored
+     * @param {object} props
+     *      Component properties object
      */
-    function Stacks(name) {
-        _classCallCheck(this, Stacks);
+    function Home(props) {
+        _classCallCheck(this, Home);
 
-        // Check name
-        this.storage = name || "dbforge_stack";
+        // Set initial state
+        var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+        // Call super constructor
 
-        // Bootstrapping storage
-        var load = localStorage.getItem(this.storage);
 
-        // Bootstrapping database data
-        if (load) {
-            // Set this database as the local storage content
-            this.database = JSON.parse(load);
-        } else {
-            // Database is empty
-            this.database = [];
-
-            // Set empty space
-            localStorage.setItem(this.storage, JSON.stringify(this.database));
-        }
+        _this.state = {};
+        return _this;
     }
 
     /**
-     * Returns all the available blueprints.
+     * Renders the component.
      *
-     * @param {boolean} by_date
-     *      Optional, set to TRUE if you'd like to sort by Date, in descending
-     *      order
-     * @returns {array}
+     * @returns {XML}
      */
 
 
-    _createClass(Stacks, [{
-        key: "browse",
-        value: function browse(by_date) {
-            // Sorting
-            if (this.database.length > 0) {
-                if (true === by_date) {
-                    this.database.sort(this.sortByDate);
-                } else {
-                    this.database.sort(this.sortByName);
-                }
-            }
-
-            // Return
-            return this.database;
-        }
-
-        /**
-         * Returns a single entry from the storage.
-         *
-         * @param {string} id
-         *      The item ID
-         * @return {object}
-         */
-
-    }, {
-        key: "select",
-        value: function select(id) {
-            // Loop through all entries
-            for (var i in this.database) {
-                // Alias
-                var item = this.database[i];
-
-                // Returning
-                if (item.id == id) return item;
-            }
-            return false;
-        }
-
-        /**
-         * Adds an item to the database.
-         *
-         * @param {object} data
-         *      Blueprint to be added to the database
-         * @returns {boolean}
-         */
-
-    }, {
-        key: "create",
-        value: function create(data) {
-            // Only save if data has the ID attribute
-            if (!data.id) {
-                return false;
-            } else {
-                // Push into the database
-                this.database.push(data);
-
-                // Update local storage
-                this.updateStorage();
-            }
-        }
-
-        /**
-         * Updates an entry in the database. The whole blueprint must be declared
-         * in the `data` parameter, as this method overwrites entries.
-         *
-         * @param {object} data
-         *      Object to be updated into the database
-         * @returns {boolean}
-         */
-
-    }, {
-        key: "update",
-        value: function update(data) {
-            // Loop through all entries
-            for (var i in this.database) {
-                // Alias
-                var item = this.database[i];
-
-                if (item.id == data.id) {
-                    // Update database
-                    this.database[i] = data;
-
-                    // Update storage
-                    this.updateStorage();
-
-                    return true;
-                }
-            }
-            // As a fallback, add the item to storage
-            return this.create(data);
-        }
-
-        /**
-         * Removes an entry from the database.
-         *
-         * @param {string} id
-         *      Entry ID
-         * @returns {boolean}
-         */
-
-    }, {
-        key: "remove",
-        value: function remove(id) {
-            // Loop through all entries
-            for (var i in this.database) {
-                // Alias
-                var item = this.database[i];
-
-                // ID found, remove
-                if (id == item.id) {
-                    // Splice the array
-                    this.database.splice(i, 1);
-
-                    // Update storage
-                    this.updateStorage();
-
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        /**
-         * Exports the desired blueprint to a file, using the table name as the
-         * file name.
-         *
-         * Files exported are JSON files with the `.dbforge` extension.
-         *
-         * @param {object} data
-         *      Blueprint data (filtered)
-         */
-
-    }, {
-        key: "makeFile",
-        value: function makeFile(data) {
-            // Set exported file name and extension
-            var file_name = data.blueprint.name || "dummy";
-            var file_extn = ".dbforge";
-
-            // Create file blob
-            var blob = new Blob([JSON.stringify(data.blueprint)], { type: "text/text" });
-
-            // Checking IE10 specific methods
-            if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-                // It's IE10, Congratulations! (Not really)
-                window.navigator.msSaveOrOpenBlob(blob, file_name + file_extn);
-            } else {
-                // Create an event for a temporary anchor element
-                var trig = document.createEvent("MouseEvents");
-                var link = document.createElement("a");
-
-                // Set download properties
-                link.download = file_name + file_extn;
-                link.href = window.URL.createObjectURL(blob);
-                link.dataset.downloadurl = ["text/json", link.download, link.href].join(":");
-
-                // Set and dispatch event
-                trig.initEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-                link.dispatchEvent(trig);
-            }
-        }
-
-        /**
-         * Fires the file exporter.
-         *
-         * @param {string} id
-         *      Blueprint ID
-         * @returns {boolean}
-         */
-
-    }, {
-        key: "saveFile",
-        value: function saveFile(id) {
-            // Loop through all entries
-            for (var i in this.database) {
-                // Alias
-                var item = this.database[i];
-
-                if (item.id == id) {
-                    // Make file
-                    this.makeFile(item);
-
-                    // Return OK
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        /**
-         * Callback used to sort blueprints by name.
-         *
-         * @param {object} a
-         *      Element A, for comparison
-         * @param {object} b
-         *      Element B, for comparison
-         * @returns {number}
-         */
-
-    }, {
-        key: "sortByName",
-        value: function sortByName(a, b) {
-            // Set values
-            var val1 = a.blueprint.name.toLowerCase();
-            var val2 = b.blueprint.name.toLowerCase();
-
-            // Returning
-            if (val1 < val2) return -1;
-            if (val1 > val2) return 1;
-            return 0;
-        }
-
-        /**
-         * Callback used to sort blueprints by date, in descending order.
-         *
-         * @param {object} a
-         *      Element A, for comparison
-         * @param {object} b
-         *      Element B, for comparison
-         * @returns {number}
-         */
-
-    }, {
-        key: "sortByDate",
-        value: function sortByDate(a, b) {
-            // Set values
-            var val1 = a.date;
-            var val2 = b.date;
-
-            // Returning
-            if (val1 > val2) return -1;
-            if (val1 < val2) return 1;
-            return 0;
-        }
-
-        /**
-         * Saves the current state of the database to localStorage.
-         */
-
-    }, {
-        key: "updateStorage",
-        value: function updateStorage() {
-            // Sort by Date on storage
-            this.database.sort(this.sortByDate);
-
-            // Save to local storage
-            localStorage.setItem(this.storage, JSON.stringify(this.database));
+    _createClass(Home, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "tool__home" },
+                _react2.default.createElement(
+                    "h4",
+                    null,
+                    "Home"
+                ),
+                _react2.default.createElement(
+                    _LinkButton2.default,
+                    { className: "hello-dumbo", to: "/edit" },
+                    "I am a Button"
+                ),
+                _react2.default.createElement(_TextInput2.default, { label: "Hello", title: "demo", value: "Namu" })
+            );
         }
     }]);
 
-    return Stacks;
-}();
+    return Home;
+}(_react.Component);
 
-exports.default = Stacks;
+exports.default = Home;
 
 /***/ }),
 /* 104 */
@@ -12011,57 +11793,270 @@ exports.default = Stacks;
 "use strict";
 
 
-var _react = __webpack_require__(4);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(119);
+var _reactRouterDom = __webpack_require__(38);
 
-var _Tool = __webpack_require__(205);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Components/LinkButton
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * A button that works like the Link object from "react-router-dom".
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You only need to pass a "to" parameter, with className being optional.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+// Import base modules
+
+
+// Main component class
+var LinkButton = function (_Component) {
+    _inherits(LinkButton, _Component);
+
+    /**
+     * Component constructor.
+     *
+     * @param {object} props
+     *      Component properties object
+     */
+    function LinkButton(props) {
+        _classCallCheck(this, LinkButton);
+
+        // Set initial state
+        var _this = _possibleConstructorReturn(this, (LinkButton.__proto__ || Object.getPrototypeOf(LinkButton)).call(this, props));
+        // Call super constructor
+
+
+        _this.state = {
+            className: _this.props.className || "",
+            redirect: false,
+            to: _this.props.to
+        };
+
+        console.log(_this.props.children);
+
+        // Bind redirect
+        _this.redirectTo = _this.redirectTo.bind(_this);
+        return _this;
+    }
+
+    /**
+     * Redirects to the given route.
+     */
+
+
+    _createClass(LinkButton, [{
+        key: "redirectTo",
+        value: function redirectTo() {
+            // Get current state
+            var curr = this.state;
+
+            // Redirects only if the "to" param is set
+            if (curr.to != "") {
+                this.props.history.push(curr.to);
+
+                // Update redirect status
+                curr.redirect = true;
+
+                // Update state
+                this.setState(curr);
+            }
+        }
+    }, {
+        key: "render",
+
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+        value: function render() {
+            // Get current state and properties handler
+            var curr = this.state;
+            var buttonProp = {};
+
+            // Build properties
+            if (this.state.className != "") buttonProp.className = curr.className;
+
+            // Return component
+            return _react2.default.createElement(
+                "button",
+                _extends({}, buttonProp, { onClick: this.redirectTo, type: "button" }),
+                this.props.children
+            );
+        }
+    }]);
+
+    return LinkButton;
+}(_react.Component);
+
+// Export with Router props
+
+
+exports.default = (0, _reactRouterDom.withRouter)(LinkButton);
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(38);
+
+var _LinkButton = __webpack_require__(104);
+
+var _LinkButton2 = _interopRequireDefault(_LinkButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Page/Home
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Home page component.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+// Import base modules
+
+
+// Import application components
+
+
+// Main component class
+var Edit = function (_Component) {
+    _inherits(Edit, _Component);
+
+    /**
+     * Component constructor.
+     *
+     * @param {object} props
+     *      Component properties object
+     */
+    function Edit(props) {
+        _classCallCheck(this, Edit);
+
+        // Set initial state
+        var _this = _possibleConstructorReturn(this, (Edit.__proto__ || Object.getPrototypeOf(Edit)).call(this, props));
+        // Call super constructor
+
+
+        _this.state = {};
+        return _this;
+    }
+
+    /**
+     * Renders the component.
+     *
+     * @returns {XML}
+     */
+
+
+    _createClass(Edit, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "tool__home" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Edit"
+                ),
+                _react2.default.createElement(
+                    _LinkButton2.default,
+                    { className: "hello-dumbo", to: "/" },
+                    "Home"
+                )
+            );
+        }
+    }]);
+
+    return Edit;
+}(_react.Component);
+
+exports.default = Edit;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(121);
+
+var _reactRouterDom = __webpack_require__(38);
+
+var _Tool = __webpack_require__(234);
 
 var _Tool2 = _interopRequireDefault(_Tool);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import Blueprints from "Helper/Blueprints";
-//import Stacker from "Helper/Stacker";
-//import Md5 from "crypto-js/md5";
-
-var test = function test(err, result) {
-    if (!err) {
-        console.log(result);
-    }
-};
-
-// Set main element for rendering
-
-
-// Import main component
+// Main element for rendering
 /**
  * DBFORGE TOOL : Main
  * ======================================================================
- * Application entry point/root.
+ * Application entry point.
  * ----------------------------------------------------------------------
  * @author      Fabio Y. Goto <lab@yuiti.com.br>
  * @version     3.0.0
  * @license     MIT License
  * @copyright   (c) 2017 Fabio Y. Goto
  */
-
-// Import base stuff
+// Import base modules
 var main = document.getElementById("tool");
 
-//const stacker = new Stacker("dbforge_stack");
-
-// console.log(stacker.insertBlueprint(new Date().toISOString(), test));
-
-// console.log(stacker.browseBlueprints());
-
 // Render application
-(0, _reactDom.render)(_react2.default.createElement(_Tool2.default, null), main);
+
+
+// Import application components
+(0, _reactDom.render)(_react2.default.createElement(
+    _reactRouterDom.BrowserRouter,
+    null,
+    _react2.default.createElement(_Tool2.default, null)
+), main);
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12077,11 +12072,11 @@ var main = document.getElementById("tool");
 
 
 
-var PooledClass = __webpack_require__(106);
+var PooledClass = __webpack_require__(108);
 var ReactElement = __webpack_require__(18);
 
 var emptyFunction = __webpack_require__(10);
-var traverseAllChildren = __webpack_require__(107);
+var traverseAllChildren = __webpack_require__(109);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -12257,7 +12252,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12375,7 +12370,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12398,7 +12393,7 @@ var REACT_ELEMENT_TYPE = __webpack_require__(66);
 
 var getIteratorFn = __webpack_require__(67);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(108);
+var KeyEscapeUtils = __webpack_require__(110);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -12557,7 +12552,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12621,7 +12616,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12796,7 +12791,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12814,8 +12809,8 @@ module.exports = ReactDOMFactories;
 
 var _prodInvariant = __webpack_require__(21);
 
-var ReactPropTypeLocationNames = __webpack_require__(111);
-var ReactPropTypesSecret = __webpack_require__(112);
+var ReactPropTypeLocationNames = __webpack_require__(113);
+var ReactPropTypesSecret = __webpack_require__(114);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -12889,7 +12884,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12920,7 +12915,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12942,7 +12937,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12966,7 +12961,7 @@ var factory = __webpack_require__(69);
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12984,7 +12979,7 @@ module.exports = factory(isValidElement);
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(1);
   var warning = __webpack_require__(2);
-  var ReactPropTypesSecret = __webpack_require__(40);
+  var ReactPropTypesSecret = __webpack_require__(41);
   var loggedTypeFailures = {};
 }
 
@@ -13035,7 +13030,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13054,7 +13049,7 @@ module.exports = checkPropTypes;
 module.exports = '15.6.1';
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13077,12 +13072,12 @@ var _require2 = __webpack_require__(18),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(65);
-var factory = __webpack_require__(117);
+var factory = __webpack_require__(119);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13098,7 +13093,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var emptyObject = __webpack_require__(31);
 var _invariant = __webpack_require__(1);
@@ -13962,7 +13957,7 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14006,17 +14001,17 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-module.exports = __webpack_require__(120);
+module.exports = __webpack_require__(122);
 
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14034,16 +14029,16 @@ module.exports = __webpack_require__(120);
 
 
 
-var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDefaultInjection = __webpack_require__(121);
+var ReactDOMComponentTree = __webpack_require__(5);
+var ReactDefaultInjection = __webpack_require__(123);
 var ReactMount = __webpack_require__(94);
 var ReactReconciler = __webpack_require__(22);
 var ReactUpdates = __webpack_require__(15);
-var ReactVersion = __webpack_require__(199);
+var ReactVersion = __webpack_require__(201);
 
-var findDOMNode = __webpack_require__(200);
+var findDOMNode = __webpack_require__(202);
 var getHostComponentFromComposite = __webpack_require__(95);
-var renderSubtreeIntoContainer = __webpack_require__(201);
+var renderSubtreeIntoContainer = __webpack_require__(203);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -14120,9 +14115,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(11);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(202);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(203);
-  var ReactDOMInvalidARIAHook = __webpack_require__(204);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(204);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(205);
+  var ReactDOMInvalidARIAHook = __webpack_require__(206);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -14133,7 +14128,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14149,25 +14144,25 @@ module.exports = ReactDOM;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(122);
-var BeforeInputEventPlugin = __webpack_require__(123);
-var ChangeEventPlugin = __webpack_require__(127);
-var DefaultEventPluginOrder = __webpack_require__(135);
-var EnterLeaveEventPlugin = __webpack_require__(136);
-var HTMLDOMPropertyConfig = __webpack_require__(137);
-var ReactComponentBrowserEnvironment = __webpack_require__(138);
-var ReactDOMComponent = __webpack_require__(144);
-var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMEmptyComponent = __webpack_require__(170);
-var ReactDOMTreeTraversal = __webpack_require__(171);
-var ReactDOMTextComponent = __webpack_require__(172);
-var ReactDefaultBatchingStrategy = __webpack_require__(173);
-var ReactEventListener = __webpack_require__(174);
-var ReactInjection = __webpack_require__(176);
-var ReactReconcileTransaction = __webpack_require__(177);
-var SVGDOMPropertyConfig = __webpack_require__(183);
-var SelectEventPlugin = __webpack_require__(184);
-var SimpleEventPlugin = __webpack_require__(185);
+var ARIADOMPropertyConfig = __webpack_require__(124);
+var BeforeInputEventPlugin = __webpack_require__(125);
+var ChangeEventPlugin = __webpack_require__(129);
+var DefaultEventPluginOrder = __webpack_require__(137);
+var EnterLeaveEventPlugin = __webpack_require__(138);
+var HTMLDOMPropertyConfig = __webpack_require__(139);
+var ReactComponentBrowserEnvironment = __webpack_require__(140);
+var ReactDOMComponent = __webpack_require__(146);
+var ReactDOMComponentTree = __webpack_require__(5);
+var ReactDOMEmptyComponent = __webpack_require__(172);
+var ReactDOMTreeTraversal = __webpack_require__(173);
+var ReactDOMTextComponent = __webpack_require__(174);
+var ReactDefaultBatchingStrategy = __webpack_require__(175);
+var ReactEventListener = __webpack_require__(176);
+var ReactInjection = __webpack_require__(178);
+var ReactReconcileTransaction = __webpack_require__(179);
+var SVGDOMPropertyConfig = __webpack_require__(185);
+var SelectEventPlugin = __webpack_require__(186);
+var SimpleEventPlugin = __webpack_require__(187);
 
 var alreadyInjected = false;
 
@@ -14224,7 +14219,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14303,7 +14298,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14321,9 +14316,9 @@ module.exports = ARIADOMPropertyConfig;
 
 var EventPropagators = __webpack_require__(24);
 var ExecutionEnvironment = __webpack_require__(7);
-var FallbackCompositionState = __webpack_require__(124);
-var SyntheticCompositionEvent = __webpack_require__(125);
-var SyntheticInputEvent = __webpack_require__(126);
+var FallbackCompositionState = __webpack_require__(126);
+var SyntheticCompositionEvent = __webpack_require__(127);
+var SyntheticInputEvent = __webpack_require__(128);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -14692,7 +14687,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14708,7 +14703,7 @@ module.exports = BeforeInputEventPlugin;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(19);
 
@@ -14792,7 +14787,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14833,7 +14828,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14875,7 +14870,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14894,13 +14889,13 @@ module.exports = SyntheticInputEvent;
 var EventPluginHub = __webpack_require__(25);
 var EventPropagators = __webpack_require__(24);
 var ExecutionEnvironment = __webpack_require__(7);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(15);
 var SyntheticEvent = __webpack_require__(16);
 
 var inputValueTracking = __webpack_require__(77);
-var getEventTarget = __webpack_require__(43);
-var isEventSupported = __webpack_require__(44);
+var getEventTarget = __webpack_require__(44);
+var isEventSupported = __webpack_require__(45);
 var isTextInputElement = __webpack_require__(78);
 
 var eventTypes = {
@@ -15192,7 +15187,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15209,7 +15204,7 @@ module.exports = ChangeEventPlugin;
 
 
 
-var ReactOwner = __webpack_require__(129);
+var ReactOwner = __webpack_require__(131);
 
 var ReactRef = {};
 
@@ -15286,7 +15281,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15385,7 +15380,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15402,12 +15397,12 @@ module.exports = ReactOwner;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(131);
-var ReactHostOperationHistoryHook = __webpack_require__(132);
+var ReactInvalidSetStateWarningHook = __webpack_require__(133);
+var ReactHostOperationHistoryHook = __webpack_require__(134);
 var ReactComponentTreeHook = __webpack_require__(9);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var performanceNow = __webpack_require__(133);
+var performanceNow = __webpack_require__(135);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -15752,7 +15747,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15795,7 +15790,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15834,7 +15829,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15851,7 +15846,7 @@ module.exports = ReactHostOperationHistoryHook;
  * @typechecks
  */
 
-var performance = __webpack_require__(134);
+var performance = __webpack_require__(136);
 
 var performanceNow;
 
@@ -15873,7 +15868,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15901,7 +15896,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15932,7 +15927,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15949,7 +15944,7 @@ module.exports = DefaultEventPluginOrder;
 
 
 var EventPropagators = __webpack_require__(24);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var SyntheticMouseEvent = __webpack_require__(34);
 
 var eventTypes = {
@@ -16035,7 +16030,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16276,7 +16271,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 138 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16292,8 +16287,8 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 
-var DOMChildrenOperations = __webpack_require__(46);
-var ReactDOMIDOperations = __webpack_require__(143);
+var DOMChildrenOperations = __webpack_require__(47);
+var ReactDOMIDOperations = __webpack_require__(145);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -16309,7 +16304,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 139 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16330,7 +16325,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(23);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createNodesFromMarkup = __webpack_require__(140);
+var createNodesFromMarkup = __webpack_require__(142);
 var emptyFunction = __webpack_require__(10);
 var invariant = __webpack_require__(1);
 
@@ -16361,7 +16356,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 140 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16382,8 +16377,8 @@ module.exports = Danger;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createArrayFromMixed = __webpack_require__(141);
-var getMarkupWrap = __webpack_require__(142);
+var createArrayFromMixed = __webpack_require__(143);
+var getMarkupWrap = __webpack_require__(144);
 var invariant = __webpack_require__(1);
 
 /**
@@ -16451,7 +16446,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 141 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16584,7 +16579,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 142 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16685,7 +16680,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 143 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16701,8 +16696,8 @@ module.exports = getMarkupWrap;
 
 
 
-var DOMChildrenOperations = __webpack_require__(46);
-var ReactDOMComponentTree = __webpack_require__(6);
+var DOMChildrenOperations = __webpack_require__(47);
+var ReactDOMComponentTree = __webpack_require__(5);
 
 /**
  * Operations used to process updates to DOM nodes.
@@ -16723,7 +16718,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 144 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16742,34 +16737,34 @@ module.exports = ReactDOMIDOperations;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
-var AutoFocusUtils = __webpack_require__(145);
-var CSSPropertyOperations = __webpack_require__(146);
+var AutoFocusUtils = __webpack_require__(147);
+var CSSPropertyOperations = __webpack_require__(148);
 var DOMLazyTree = __webpack_require__(23);
-var DOMNamespaces = __webpack_require__(47);
+var DOMNamespaces = __webpack_require__(48);
 var DOMProperty = __webpack_require__(17);
 var DOMPropertyOperations = __webpack_require__(83);
 var EventPluginHub = __webpack_require__(25);
 var EventPluginRegistry = __webpack_require__(32);
 var ReactBrowserEventEmitter = __webpack_require__(37);
 var ReactDOMComponentFlags = __webpack_require__(71);
-var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMInput = __webpack_require__(156);
-var ReactDOMOption = __webpack_require__(157);
+var ReactDOMComponentTree = __webpack_require__(5);
+var ReactDOMInput = __webpack_require__(158);
+var ReactDOMOption = __webpack_require__(159);
 var ReactDOMSelect = __webpack_require__(85);
-var ReactDOMTextarea = __webpack_require__(158);
+var ReactDOMTextarea = __webpack_require__(160);
 var ReactInstrumentation = __webpack_require__(11);
-var ReactMultiChild = __webpack_require__(159);
-var ReactServerRenderingTransaction = __webpack_require__(168);
+var ReactMultiChild = __webpack_require__(161);
+var ReactServerRenderingTransaction = __webpack_require__(170);
 
 var emptyFunction = __webpack_require__(10);
 var escapeTextContentForBrowser = __webpack_require__(36);
 var invariant = __webpack_require__(1);
-var isEventSupported = __webpack_require__(44);
-var shallowEqual = __webpack_require__(51);
+var isEventSupported = __webpack_require__(45);
+var shallowEqual = __webpack_require__(52);
 var inputValueTracking = __webpack_require__(77);
-var validateDOMNesting = __webpack_require__(55);
+var validateDOMNesting = __webpack_require__(56);
 var warning = __webpack_require__(2);
 
 var Flags = ReactDOMComponentFlags;
@@ -17739,7 +17734,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 145 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17755,7 +17750,7 @@ module.exports = ReactDOMComponent;
 
 
 
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 
 var focusNode = __webpack_require__(81);
 
@@ -17768,7 +17763,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 146 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17788,10 +17783,10 @@ var CSSProperty = __webpack_require__(82);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactInstrumentation = __webpack_require__(11);
 
-var camelizeStyleName = __webpack_require__(147);
-var dangerousStyleValue = __webpack_require__(149);
-var hyphenateStyleName = __webpack_require__(150);
-var memoizeStringOnly = __webpack_require__(152);
+var camelizeStyleName = __webpack_require__(149);
+var dangerousStyleValue = __webpack_require__(151);
+var hyphenateStyleName = __webpack_require__(152);
+var memoizeStringOnly = __webpack_require__(154);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -17989,7 +17984,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18006,7 +18001,7 @@ module.exports = CSSPropertyOperations;
 
 
 
-var camelize = __webpack_require__(148);
+var camelize = __webpack_require__(150);
 
 var msPattern = /^-ms-/;
 
@@ -18034,7 +18029,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18071,7 +18066,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18156,7 +18151,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18173,7 +18168,7 @@ module.exports = dangerousStyleValue;
 
 
 
-var hyphenate = __webpack_require__(151);
+var hyphenate = __webpack_require__(153);
 
 var msPattern = /^ms-/;
 
@@ -18200,7 +18195,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18238,7 +18233,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18273,7 +18268,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18304,7 +18299,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18341,7 +18336,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18447,7 +18442,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18464,11 +18459,11 @@ module.exports = getVendorPrefixedEventName;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
 var DOMPropertyOperations = __webpack_require__(83);
-var LinkedValueUtils = __webpack_require__(49);
-var ReactDOMComponentTree = __webpack_require__(6);
+var LinkedValueUtils = __webpack_require__(50);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(15);
 
 var invariant = __webpack_require__(1);
@@ -18740,7 +18735,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18756,10 +18751,10 @@ module.exports = ReactDOMInput;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var React = __webpack_require__(20);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMSelect = __webpack_require__(85);
 
 var warning = __webpack_require__(2);
@@ -18868,7 +18863,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18885,10 +18880,10 @@ module.exports = ReactDOMOption;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
-var LinkedValueUtils = __webpack_require__(49);
-var ReactDOMComponentTree = __webpack_require__(6);
+var LinkedValueUtils = __webpack_require__(50);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(15);
 
 var invariant = __webpack_require__(1);
@@ -19034,7 +19029,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19052,16 +19047,16 @@ module.exports = ReactDOMTextarea;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactComponentEnvironment = __webpack_require__(50);
+var ReactComponentEnvironment = __webpack_require__(51);
 var ReactInstanceMap = __webpack_require__(27);
 var ReactInstrumentation = __webpack_require__(11);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactReconciler = __webpack_require__(22);
-var ReactChildReconciler = __webpack_require__(160);
+var ReactChildReconciler = __webpack_require__(162);
 
 var emptyFunction = __webpack_require__(10);
-var flattenChildren = __webpack_require__(167);
+var flattenChildren = __webpack_require__(169);
 var invariant = __webpack_require__(1);
 
 /**
@@ -19486,7 +19481,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19505,8 +19500,8 @@ module.exports = ReactMultiChild;
 var ReactReconciler = __webpack_require__(22);
 
 var instantiateReactComponent = __webpack_require__(86);
-var KeyEscapeUtils = __webpack_require__(53);
-var shouldUpdateReactComponent = __webpack_require__(52);
+var KeyEscapeUtils = __webpack_require__(54);
+var shouldUpdateReactComponent = __webpack_require__(53);
 var traverseAllChildren = __webpack_require__(90);
 var warning = __webpack_require__(2);
 
@@ -19645,7 +19640,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19662,25 +19657,25 @@ module.exports = ReactChildReconciler;
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
 var React = __webpack_require__(20);
-var ReactComponentEnvironment = __webpack_require__(50);
+var ReactComponentEnvironment = __webpack_require__(51);
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactErrorUtils = __webpack_require__(42);
+var ReactErrorUtils = __webpack_require__(43);
 var ReactInstanceMap = __webpack_require__(27);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactNodeTypes = __webpack_require__(87);
 var ReactReconciler = __webpack_require__(22);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(162);
+  var checkReactTypeSpec = __webpack_require__(164);
 }
 
 var emptyObject = __webpack_require__(31);
 var invariant = __webpack_require__(1);
-var shallowEqual = __webpack_require__(51);
-var shouldUpdateReactComponent = __webpack_require__(52);
+var shallowEqual = __webpack_require__(52);
+var shouldUpdateReactComponent = __webpack_require__(53);
 var warning = __webpack_require__(2);
 
 var CompositeTypes = {
@@ -20551,7 +20546,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20569,7 +20564,7 @@ module.exports = ReactCompositeComponent;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypeLocationNames = __webpack_require__(163);
+var ReactPropTypeLocationNames = __webpack_require__(165);
 var ReactPropTypesSecret = __webpack_require__(84);
 
 var invariant = __webpack_require__(1);
@@ -20644,7 +20639,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20675,7 +20670,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20701,7 +20696,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20726,7 +20721,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20772,7 +20767,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20789,7 +20784,7 @@ module.exports = getIteratorFn;
 
 
 
-var KeyEscapeUtils = __webpack_require__(53);
+var KeyEscapeUtils = __webpack_require__(54);
 var traverseAllChildren = __webpack_require__(90);
 var warning = __webpack_require__(2);
 
@@ -20854,7 +20849,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20870,12 +20865,12 @@ module.exports = flattenChildren;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(19);
 var Transaction = __webpack_require__(33);
 var ReactInstrumentation = __webpack_require__(11);
-var ReactServerUpdateQueue = __webpack_require__(169);
+var ReactServerUpdateQueue = __webpack_require__(171);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -20950,7 +20945,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20969,7 +20964,7 @@ module.exports = ReactServerRenderingTransaction;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ReactUpdateQueue = __webpack_require__(54);
+var ReactUpdateQueue = __webpack_require__(55);
 
 var warning = __webpack_require__(2);
 
@@ -21095,7 +21090,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21111,10 +21106,10 @@ module.exports = ReactServerUpdateQueue;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var DOMLazyTree = __webpack_require__(23);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 
 var ReactDOMEmptyComponent = function (instantiate) {
   // ReactCompositeComponent uses this:
@@ -21160,7 +21155,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21302,7 +21297,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21319,15 +21314,15 @@ module.exports = {
 
 
 var _prodInvariant = __webpack_require__(3),
-    _assign = __webpack_require__(5);
+    _assign = __webpack_require__(4);
 
-var DOMChildrenOperations = __webpack_require__(46);
+var DOMChildrenOperations = __webpack_require__(47);
 var DOMLazyTree = __webpack_require__(23);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 
 var escapeTextContentForBrowser = __webpack_require__(36);
 var invariant = __webpack_require__(1);
-var validateDOMNesting = __webpack_require__(55);
+var validateDOMNesting = __webpack_require__(56);
 
 /**
  * Text nodes violate a couple assumptions that React makes about components:
@@ -21470,7 +21465,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21486,7 +21481,7 @@ module.exports = ReactDOMTextComponent;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var ReactUpdates = __webpack_require__(15);
 var Transaction = __webpack_require__(33);
@@ -21543,7 +21538,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21559,16 +21554,16 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var EventListener = __webpack_require__(91);
 var ExecutionEnvironment = __webpack_require__(7);
 var PooledClass = __webpack_require__(19);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(15);
 
-var getEventTarget = __webpack_require__(43);
-var getUnboundedScrollPosition = __webpack_require__(175);
+var getEventTarget = __webpack_require__(44);
+var getUnboundedScrollPosition = __webpack_require__(177);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -21703,7 +21698,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21747,7 +21742,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21765,8 +21760,8 @@ module.exports = getUnboundedScrollPosition;
 
 var DOMProperty = __webpack_require__(17);
 var EventPluginHub = __webpack_require__(25);
-var EventPluginUtils = __webpack_require__(41);
-var ReactComponentEnvironment = __webpack_require__(50);
+var EventPluginUtils = __webpack_require__(42);
+var ReactComponentEnvironment = __webpack_require__(51);
 var ReactEmptyComponent = __webpack_require__(88);
 var ReactBrowserEventEmitter = __webpack_require__(37);
 var ReactHostComponent = __webpack_require__(89);
@@ -21786,7 +21781,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21802,7 +21797,7 @@ module.exports = ReactInjection;
 
 
 
-var _assign = __webpack_require__(5);
+var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(75);
 var PooledClass = __webpack_require__(19);
@@ -21810,7 +21805,7 @@ var ReactBrowserEventEmitter = __webpack_require__(37);
 var ReactInputSelection = __webpack_require__(92);
 var ReactInstrumentation = __webpack_require__(11);
 var Transaction = __webpack_require__(33);
-var ReactUpdateQueue = __webpack_require__(54);
+var ReactUpdateQueue = __webpack_require__(55);
 
 /**
  * Ensures that, when possible, the selection range (currently selected text
@@ -21970,7 +21965,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21988,7 +21983,7 @@ module.exports = ReactReconcileTransaction;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var getNodeForCharacterOffset = __webpack_require__(179);
+var getNodeForCharacterOffset = __webpack_require__(181);
 var getTextContentAccessor = __webpack_require__(74);
 
 /**
@@ -22187,7 +22182,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22266,7 +22261,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22283,7 +22278,7 @@ module.exports = getNodeForCharacterOffset;
  * 
  */
 
-var isTextNode = __webpack_require__(181);
+var isTextNode = __webpack_require__(183);
 
 /*eslint-disable no-bitwise */
 
@@ -22311,7 +22306,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22328,7 +22323,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(182);
+var isNode = __webpack_require__(184);
 
 /**
  * @param {*} object The object to check.
@@ -22341,7 +22336,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22371,7 +22366,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22678,7 +22673,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22696,13 +22691,13 @@ module.exports = SVGDOMPropertyConfig;
 
 var EventPropagators = __webpack_require__(24);
 var ExecutionEnvironment = __webpack_require__(7);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInputSelection = __webpack_require__(92);
 var SyntheticEvent = __webpack_require__(16);
 
 var getActiveElement = __webpack_require__(93);
 var isTextInputElement = __webpack_require__(78);
-var shallowEqual = __webpack_require__(51);
+var shallowEqual = __webpack_require__(52);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
@@ -22871,7 +22866,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22892,21 +22887,21 @@ var _prodInvariant = __webpack_require__(3);
 
 var EventListener = __webpack_require__(91);
 var EventPropagators = __webpack_require__(24);
-var ReactDOMComponentTree = __webpack_require__(6);
-var SyntheticAnimationEvent = __webpack_require__(186);
-var SyntheticClipboardEvent = __webpack_require__(187);
+var ReactDOMComponentTree = __webpack_require__(5);
+var SyntheticAnimationEvent = __webpack_require__(188);
+var SyntheticClipboardEvent = __webpack_require__(189);
 var SyntheticEvent = __webpack_require__(16);
-var SyntheticFocusEvent = __webpack_require__(188);
-var SyntheticKeyboardEvent = __webpack_require__(189);
+var SyntheticFocusEvent = __webpack_require__(190);
+var SyntheticKeyboardEvent = __webpack_require__(191);
 var SyntheticMouseEvent = __webpack_require__(34);
-var SyntheticDragEvent = __webpack_require__(191);
-var SyntheticTouchEvent = __webpack_require__(192);
-var SyntheticTransitionEvent = __webpack_require__(193);
+var SyntheticDragEvent = __webpack_require__(193);
+var SyntheticTouchEvent = __webpack_require__(194);
+var SyntheticTransitionEvent = __webpack_require__(195);
 var SyntheticUIEvent = __webpack_require__(26);
-var SyntheticWheelEvent = __webpack_require__(194);
+var SyntheticWheelEvent = __webpack_require__(196);
 
 var emptyFunction = __webpack_require__(10);
-var getEventCharCode = __webpack_require__(56);
+var getEventCharCode = __webpack_require__(57);
 var invariant = __webpack_require__(1);
 
 /**
@@ -23103,7 +23098,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23147,7 +23142,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23190,7 +23185,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23231,7 +23226,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 189 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23249,9 +23244,9 @@ module.exports = SyntheticFocusEvent;
 
 var SyntheticUIEvent = __webpack_require__(26);
 
-var getEventCharCode = __webpack_require__(56);
-var getEventKey = __webpack_require__(190);
-var getEventModifierState = __webpack_require__(45);
+var getEventCharCode = __webpack_require__(57);
+var getEventKey = __webpack_require__(192);
+var getEventModifierState = __webpack_require__(46);
 
 /**
  * @interface KeyboardEvent
@@ -23320,7 +23315,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 190 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23336,7 +23331,7 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var getEventCharCode = __webpack_require__(56);
+var getEventCharCode = __webpack_require__(57);
 
 /**
  * Normalization of deprecated HTML5 `key` values
@@ -23437,7 +23432,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23478,7 +23473,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23496,7 +23491,7 @@ module.exports = SyntheticDragEvent;
 
 var SyntheticUIEvent = __webpack_require__(26);
 
-var getEventModifierState = __webpack_require__(45);
+var getEventModifierState = __webpack_require__(46);
 
 /**
  * @interface TouchEvent
@@ -23528,7 +23523,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23572,7 +23567,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23628,7 +23623,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23644,7 +23639,7 @@ module.exports = SyntheticWheelEvent;
 
 
 
-var validateDOMNesting = __webpack_require__(55);
+var validateDOMNesting = __webpack_require__(56);
 
 var DOC_NODE_TYPE = 9;
 
@@ -23667,7 +23662,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23691,7 +23686,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23707,7 +23702,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var adler32 = __webpack_require__(198);
+var adler32 = __webpack_require__(200);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -23746,7 +23741,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23795,7 +23790,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23814,7 +23809,7 @@ module.exports = adler32;
 module.exports = '15.6.1';
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23833,7 +23828,7 @@ module.exports = '15.6.1';
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactDOMComponentTree = __webpack_require__(6);
+var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstanceMap = __webpack_require__(27);
 
 var getHostComponentFromComposite = __webpack_require__(95);
@@ -23880,7 +23875,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 201 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23901,7 +23896,7 @@ var ReactMount = __webpack_require__(94);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 202 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24019,7 +24014,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 203 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24068,7 +24063,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 204 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24167,144 +24162,17 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(57);
-
-var _ToolHeader = __webpack_require__(233);
-
-var _ToolHeader2 = _interopRequireDefault(_ToolHeader);
-
-var _ToolFooter = __webpack_require__(234);
-
-var _ToolFooter2 = _interopRequireDefault(_ToolFooter);
-
-var _Home = __webpack_require__(235);
-
-var _Home2 = _interopRequireDefault(_Home);
-
-var _Demo = __webpack_require__(236);
-
-var _Demo2 = _interopRequireDefault(_Demo);
-
-var _Edit = __webpack_require__(237);
-
-var _Edit2 = _interopRequireDefault(_Edit);
-
-var _Load = __webpack_require__(243);
-
-var _Load2 = _interopRequireDefault(_Load);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Base/Tool
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Main application wrapper.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-// Import libraries
-
-
-// Import local modules
-
-
-// Import pages
-
-
-// Main component class
-var Tool = function (_Component) {
-    _inherits(Tool, _Component);
-
-    /**
-     * Component constructor.
-     *
-     * @param {object} props
-     */
-    function Tool(props) {
-        _classCallCheck(this, Tool);
-
-        // Bootstrap component state
-        var _this = _possibleConstructorReturn(this, (Tool.__proto__ || Object.getPrototypeOf(Tool)).call(this, props));
-        // Always call super first!
-
-
-        _this.state = {};
-        return _this;
-    }
-
-    /**
-     * Renders the component.
-     *
-     * I'm using two `BrowseRouter` components here because I need some
-     * conditional stuff to happen on the header, depending on the page
-     */
-
-
-    _createClass(Tool, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "tool__main" },
-                _react2.default.createElement(
-                    _reactRouterDom.BrowserRouter,
-                    null,
-                    _react2.default.createElement(
-                        "div",
-                        null,
-                        _react2.default.createElement(_reactRouterDom.Route, { path: "/edit", component: _ToolHeader2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: "/edit/:blueprint_id?", component: _Edit2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: "/load", component: _ToolHeader2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: "/load", component: _Load2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: "/demo", component: _ToolHeader2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: "/demo/:blueprint_id?", component: _Demo2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _ToolHeader2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _Home2.default })
-                    )
-                ),
-                _react2.default.createElement(_ToolFooter2.default, null)
-            );
-        }
-    }]);
-
-    return Tool;
-}(_react.Component);
-
-exports.default = Tool;
-
-/***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createBrowserHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(60);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24361,7 +24229,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24378,7 +24246,7 @@ BrowserRouter.propTypes = {
 
 var emptyFunction = __webpack_require__(10);
 var invariant = __webpack_require__(1);
-var ReactPropTypesSecret = __webpack_require__(40);
+var ReactPropTypesSecret = __webpack_require__(41);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -24427,7 +24295,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24740,17 +24608,17 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createHashHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(60);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24806,7 +24674,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25136,28 +25004,28 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(213);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_history_createMemoryHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(61);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25214,7 +25082,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25390,11 +25258,11 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -25471,10 +25339,10 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(216)
+var isarray = __webpack_require__(217)
 
 /**
  * Expose `pathToRegexp`.
@@ -25903,7 +25771,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -25912,22 +25780,22 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(219);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -26014,22 +25882,22 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(221);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -26037,7 +25905,7 @@ Prompt.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(222);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -26133,17 +26001,17 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(223);
 /* unused harmony reexport createBrowserHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(224);
 /* unused harmony reexport createHashHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(225);
 /* unused harmony reexport createMemoryHistory */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(39);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__PathUtils__ = __webpack_require__(29);
@@ -26160,7 +26028,7 @@ Redirect.contextTypes = {
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26168,7 +26036,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(102);
@@ -26464,7 +26332,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createBrowserHistory);
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26472,7 +26340,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(102);
@@ -26785,14 +26653,14 @@ var createHashHistory = function createHashHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(63);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -26953,18 +26821,18 @@ var createMemoryHistory = function createMemoryHistory() {
 /* unused harmony default export */ var _unused_webpack_default_export = (createMemoryHistory);
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(227);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26972,7 +26840,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
@@ -27147,22 +27015,22 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 227 */
+/* 228 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(229);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 228 */
+/* 229 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -27252,7 +27120,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 229 */
+/* 230 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27263,26 +27131,26 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(232);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(101);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -27319,7 +27187,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27391,207 +27259,6 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 233 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Base/ToolHeader
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Application header.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-// Import libraries
-
-
-// Import local modules
-
-// Main component class
-var ToolHeader = function (_Component) {
-    _inherits(ToolHeader, _Component);
-
-    /**
-     * Component constructor.
-     *
-     * @param {object} props
-     */
-    function ToolHeader(props) {
-        _classCallCheck(this, ToolHeader);
-
-        // Check path prop
-        var _this = _possibleConstructorReturn(this, (ToolHeader.__proto__ || Object.getPrototypeOf(ToolHeader)).call(this, props));
-        // Always call super first!
-
-
-        var path = "";
-        var home = true;
-        if (_this.props.location && _this.props.match.params) {
-            path = _this.props.match.url;
-
-            // Not home
-            if (path != "/") home = false;
-        }
-
-        // Bootstrap component state
-        _this.state = {
-            is_home: home,
-            path: path,
-            view_info: false,
-            home_message: false,
-            redirect_home: false
-        };
-        return _this;
-    }
-
-    /**
-     * Triggers the "are you sure you want to go home?" message, when editing.
-     */
-
-
-    _createClass(ToolHeader, [{
-        key: "moveHome",
-        value: function moveHome() {
-            // State alias
-            var curr = this.state;
-
-            if (this.state.path == "/edit") {
-                curr.home_message = true;
-            } else {
-                //this.state.redirect_home = true;
-                this.props.history.push("/");
-            }
-
-            // Update state
-            this.setState(curr);
-        }
-
-        /**
-         * Toggles the info screen on and off.
-         */
-
-    }, {
-        key: "viewInfo",
-        value: function viewInfo() {
-            // State alias
-            var curr = this.state;
-
-            // Update state
-            curr.view_info = !curr.view_info;
-
-            // Update state
-            this.setState(curr);
-        }
-
-        /**
-         * Renders the component.
-         */
-
-    }, {
-        key: "render",
-        value: function render() {
-            var _props = this.props,
-                match = _props.match,
-                location = _props.location,
-                history = _props.history;
-
-            // If redirecting to home
-
-            if (this.state.path != "" && this.state.redirect_home === true) {
-                return _react2.default.createElement(Redirect, { to: "/", push: true });
-            } else {
-                // About screen handler
-                var info_class = this.state.view_info ? "tool__info in" : "tool__info";
-
-                // Show info
-                var info = _react2.default.createElement(
-                    "div",
-                    { className: info_class },
-                    _react2.default.createElement(
-                        "h5",
-                        null,
-                        "DBForge Tool"
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        "by Fabio Y. Goto"
-                    ),
-                    _react2.default.createElement(
-                        "button",
-                        { onClick: this.viewInfo.bind(this) },
-                        "X"
-                    )
-                );
-
-                // Check props to properly set a "go home" menu item
-                var menu = [];
-
-                // If the user's editing or loading
-                if (!this.state.is_home) {
-                    menu.push(_react2.default.createElement(
-                        "button",
-                        { key: "menu-home", onClick: this.moveHome.bind(this) },
-                        "HOME"
-                    ));
-                }
-
-                // Always add an info Link
-                menu.push(_react2.default.createElement(
-                    "button",
-                    { key: "menu-item", onClick: this.viewInfo.bind(this) },
-                    "INFO"
-                ));
-
-                return _react2.default.createElement(
-                    "header",
-                    { className: "tool__head" },
-                    _react2.default.createElement(
-                        "h3",
-                        null,
-                        "DBForge Tool"
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        "by Fabio Y. Goto"
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "tool__head-menu" },
-                        menu
-                    ),
-                    info
-                );
-            }
-        }
-    }]);
-
-    return ToolHeader;
-}(_react.Component);
-
-exports.default = ToolHeader;
-
-/***/ }),
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27604,9 +27271,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(38);
+
+var _Routes = __webpack_require__(235);
+
+var _Home = __webpack_require__(103);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Edit = __webpack_require__(105);
+
+var _Edit2 = _interopRequireDefault(_Edit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27615,17 +27294,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Base/ToolFooter
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Base/Tool
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Application footer.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Application main component, acts as a wrapper for header, footer and the
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * application sections.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * ----------------------------------------------------------------------
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * @author      Fabio Y. Goto <lab@yuiti.com.br>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * @since       3.0.0
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
-// Import libraries
+// Import base modules
 
 
-// Import local modules
+// Import application components
+
 
 // Main component class
 var Tool = function (_Component) {
@@ -27635,35 +27316,67 @@ var Tool = function (_Component) {
      * Component constructor.
      *
      * @param {object} props
+     *      Component properties object
      */
     function Tool(props) {
         _classCallCheck(this, Tool);
 
-        // Bootstrap component state
+        // Set initial state
         var _this = _possibleConstructorReturn(this, (Tool.__proto__ || Object.getPrototypeOf(Tool)).call(this, props));
-        // Always call super first!
+        // Call super constructor
 
 
         _this.state = {};
+
+        // Application routes
+        _this.routes = [{
+            path: "/",
+            exact: true
+        }];
+
+        // Define home menu routes
+        _this.routes = _Routes.AppRoute;
+        console.log(_this.routes);
         return _this;
     }
 
     /**
-     * Renders the component.
+     * Callback used to handle routes, when mapping the array.
+     *
+     * @param {object} route
+     *      Route data object
+     * @param {integer} index
+     *      Route unique index
+     * @returns {XML}
      */
 
 
     _createClass(Tool, [{
+        key: "routesHandle",
+        value: function routesHandle(route, index) {
+            return _react2.default.createElement(_reactRouterDom.Route, { key: index,
+                path: route.path,
+                exact: route.exact,
+                component: route.component });
+        }
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+
+    }, {
         key: "render",
         value: function render() {
+            // Mapping routes to components
+            var routes = this.routes.map(this.routesHandle);
+
+            // Render the component
             return _react2.default.createElement(
-                "footer",
-                null,
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "\xA92017 Fabio Y. Goto"
-                )
+                "div",
+                { className: "tool__wrap" },
+                routes
             );
         }
     }]);
@@ -27680,110 +27393,49 @@ exports.default = Tool;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+var _Home = __webpack_require__(103);
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _Home2 = _interopRequireDefault(_Home);
 
-var _react = __webpack_require__(4);
+var _Edit = __webpack_require__(105);
 
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(57);
+var _Edit2 = _interopRequireDefault(_Edit);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Page/Home
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Home screen of the application.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-// Import libraries
-
-
+/**
+ * Array containing all possible menu routes.
+ *
+ * @type {array}
+ */
+/**
+ * DBFORGE TOOL : Routes/Routes
+ * ======================================================================
+ * Home page component.
+ * ----------------------------------------------------------------------
+ * @author      Fabio Y. Goto <lab@yuiti.com.br>
+ * @since       3.0.0
+ */
 // Import local modules
+var AppRoute = [{
+    name: "Home",
+    path: "/",
+    exact: true,
+    component: _Home2.default
+}, {
+    name: "Load",
+    path: "/load",
+    exact: false,
+    component: _Home2.default
+}, {
+    name: "Edit",
+    path: "/edit/:blueprint_id?",
+    exact: false,
+    component: _Edit2.default
+}];
 
-// Main component class
-var Home = function (_Component) {
-    _inherits(Home, _Component);
-
-    /**
-     * Component constructor.
-     *
-     * @param {object} props
-     */
-    function Home(props) {
-        _classCallCheck(this, Home);
-
-        // Bootstrap component state
-        var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
-        // Always call super first!
-
-
-        _this.state = {};
-        return _this;
-    }
-
-    /**
-     * Renders the component.
-     */
-
-
-    _createClass(Home, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "tool__home" },
-                _react2.default.createElement(
-                    "h4",
-                    null,
-                    "Home"
-                ),
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "Lorem ipsum dolor sit amet, consectetur."
-                ),
-                _react2.default.createElement(
-                    "ul",
-                    null,
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            _reactRouterDom.Link,
-                            { to: "/edit" },
-                            "Create Blueprint"
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                            _reactRouterDom.Link,
-                            { to: "/load" },
-                            "Load Blueprint"
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Home;
-}(_react.Component);
-
-exports.default = Home;
+// Export module
+module.exports.AppRoute = AppRoute;
 
 /***/ }),
 /* 236 */
@@ -27798,7 +27450,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -27809,1935 +27461,102 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Page/Demo
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Components/TextInput
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Demo/sandbox page for the application.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Text Input component, wrapped in a div with a label.
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * ----------------------------------------------------------------------
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * @author      Fabio Y. Goto <lab@yuiti.com.br>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * @since       3.0.0
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
+// Import base modules
 
-// Import libraries
-
-
-// Import local modules
 
 // Main component class
-var Demo = function (_Component) {
-    _inherits(Demo, _Component);
+var TextInput = function (_Component) {
+    _inherits(TextInput, _Component);
 
     /**
      * Component constructor.
      *
      * @param {object} props
+     *      Component properties object
      */
-    function Demo(props) {
-        _classCallCheck(this, Demo);
-
-        var _this = _possibleConstructorReturn(this, (Demo.__proto__ || Object.getPrototypeOf(Demo)).call(this, props));
-        // Always call super first!
-
-
-        if (_this.props.match && _this.props.match.params) {
-            _this.state = {
-                blueprint_id: _this.props.match.params.blueprint_id
-            };
-        } else {
-            // Bootstrap component state
-            _this.state = {
-                blueprint_id: ""
-            };
-        }
-        return _this;
-    }
-
-    /**
-     * Renders the component.
-     */
-
-
-    _createClass(Demo, [{
-        key: "render",
-        value: function render(match) {
-            var has_bp = this.state.blueprint_id ? _react2.default.createElement(
-                "p",
-                null,
-                "Has Blueprint"
-            ) : _react2.default.createElement(
-                "p",
-                null,
-                "Has No Blueprint"
-            );
-
-            return _react2.default.createElement(
-                "div",
-                { className: "tool__demo" },
-                _react2.default.createElement(
-                    "h4",
-                    null,
-                    "Demo"
-                ),
-                has_bp,
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "Lorem ipsum dolor sit amet, consectetur."
-                )
-            );
-        }
-    }]);
-
-    return Demo;
-}(_react.Component);
-
-exports.default = Demo;
-
-/***/ }),
-/* 237 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Column = __webpack_require__(238);
-
-var _Column2 = _interopRequireDefault(_Column);
-
-var _Blueprints = __webpack_require__(240);
-
-var _Blueprints2 = _interopRequireDefault(_Blueprints);
-
-var _Stacks = __webpack_require__(103);
-
-var _Stacks2 = _interopRequireDefault(_Stacks);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Page/Edit
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * The "core" of the application, the blueprint editor.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-// Import libraries
-
-
-// Import local modules
-
-
-// Main component class
-var Edit = function (_Component) {
-    _inherits(Edit, _Component);
-
-    /**
-     * Component constructor.
-     *
-     * @param {object} props
-     */
-    function Edit(props) {
-        _classCallCheck(this, Edit);
-
-        // Create an instance of stacks
-        var _this = _possibleConstructorReturn(this, (Edit.__proto__ || Object.getPrototypeOf(Edit)).call(this, props));
-        // Always call super first!
-
-
-        _this.stacks = new _Stacks2.default("dbforge_stack");
-
-        // Initial blueprint ID and data states
-        var blueprint_id = "";
-        var blueprint_data = {};
-        var is_new = true;
-
-        // Route parameters handle
-        var routes = _this.props.match;
-
-        // Check if the blueprint ID was declared
-        if (routes && routes.params.blueprint_id) {
-            // Set blueprint ID from params
-            blueprint_id = routes.params.blueprint_id;
-
-            // Get data
-            blueprint_data = _this.stacks.select(blueprint_id);
-
-            // If the data wasn't properly loaded
-            if (blueprint_data) {
-                is_new = false;
-            } else {
-                // Create a new blueprint as fallback
-                blueprint_data = _Blueprints2.default.generateBlankBlueprint();
-                blueprint_id = blueprint_data.id;
-            }
-        } else {
-            // Create a new blueprint
-            blueprint_data = _Blueprints2.default.generateBlankBlueprint();
-            blueprint_id = blueprint_data.id;
-        }
-
-        // Bootstrap component state
-        _this.state = {
-            is_new: is_new,
-            blueprint_id: blueprint_id,
-            data: blueprint_data,
-            message_in: false,
-            message_out: false,
-            message: ""
-        };
-        return _this;
-    }
-
-    /**
-     * Closes the alert window.
-     */
-
-
-    _createClass(Edit, [{
-        key: "closeAlert",
-        value: function closeAlert() {
-            var _this2 = this;
-
-            // State alias
-            var curr = this.state;
-
-            // Set trigger
-            curr.message_out = true;
-
-            // Set timeout for resetting everything
-            setTimeout(function () {
-                // State alias
-                var curr = _this2.state;
-
-                // Reset messages
-                curr.message = "";
-                curr.message_in = false;
-                curr.message_out = false;
-            }, 500);
-
-            // Update state
-            this.setState(curr);
-        }
-    }, {
-        key: "addColumn",
-        value: function addColumn() {
-            // State alias
-            var curr = this.state;
-
-            // Push new item
-            curr.data.columns.push(_Blueprints2.default.generateBlankColumn());
-
-            // Update state
-            this.setState(curr);
-        }
-
-        /**
-         * Saves the current blueprint to local storage.
-         */
-
-    }, {
-        key: "save",
-        value: function save() {
-            // State alias
-            var curr = this.state;
-
-            if (curr.data.columns.length < 1) {
-                // Set message in
-                curr.message_in = true;
-
-                // Set message
-                curr.message = "You're trying to save a blueprint with no columns.";
-            } else {
-                // If there are columns, check if there's a title attribute
-                if (curr.data.name != "") {
-                    // Save blueprint to local storage
-                    this.stacks.update(curr.data);
-
-                    // Update blueprint as not new
-                    curr.is_new = false;
-                } else {
-                    // Set message in
-                    curr.message_in = true;
-
-                    // Set message
-                    curr.message = "You must provide a table name before saving it.";
-                }
-            }
-
-            // Update state
-            this.setState(curr);
-        }
-
-        /**
-         * Renders the component.
-         */
-
-    }, {
-        key: "render",
-        value: function render() {
-            // State handler
-            var state = this.state;
-
-            // Define the title for the page
-            var title = this.state.is_new ? _react2.default.createElement(
-                "h4",
-                null,
-                "New Blueprint"
-            ) : _react2.default.createElement(
-                "h4",
-                null,
-                "Editing Blueprint: ",
-                _react2.default.createElement(
-                    "em",
-                    null,
-                    this.state.data.name
-                )
-            );
-
-            var alerts_view = void 0;
-
-            if (state.message && state.message_in && !state.message_out) {
-                alerts_view = "tool__alerts in";
-            } else if (state.message && state.message_in && state.message_out) {
-                alerts_view = "tool__alerts out";
-            } else {
-                alerts_view = "tool__alerts";
-            }
-
-            var alerts = _react2.default.createElement(
-                "div",
-                { className: alerts_view },
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    this.state.message
-                ),
-                _react2.default.createElement(
-                    "button",
-                    { onClick: this.closeAlert.bind(this) },
-                    "X"
-                )
-            );
-
-            var column_list = [];
-
-            if (state.data.columns.length > 0) {
-                for (var i in state.data.columns) {
-                    column_list.push(_react2.default.createElement(_Column2.default, { key: i, column: state.data.columns[i] }));
-                }
-            } else {
-                column_list.push(_react2.default.createElement(
-                    "div",
-                    { key: "no-column" },
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        "There's absolutely no column in here, dude."
-                    )
-                ));
-            }
-
-            return _react2.default.createElement(
-                "div",
-                { className: "tool__home" },
-                alerts,
-                title,
-                _react2.default.createElement(
-                    "p",
-                    null,
-                    "Lorem ipsum dolor sit amet, consectetur."
-                ),
-                column_list,
-                _react2.default.createElement(
-                    "button",
-                    { onClick: this.addColumn.bind(this) },
-                    "Add Column"
-                ),
-                _react2.default.createElement(
-                    "button",
-                    { onClick: this.save.bind(this) },
-                    "Save"
-                )
-            );
-        }
-    }]);
-
-    return Edit;
-}(_react.Component);
-
-exports.default = Edit;
-
-/***/ }),
-/* 238 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _FieldsText = __webpack_require__(239);
-
-var _FieldsText2 = _interopRequireDefault(_FieldsText);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Components/Column
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Handles a single column on the blueprint editor.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-// Import libraries
-
-
-// Import local modules
-
-
-// Main component class
-var Column = function (_Component) {
-    _inherits(Column, _Component);
-
-    /**
-     * Component constructor.
-     *
-     * @param {object} props
-     */
-    function Column(props) {
-        _classCallCheck(this, Column);
-
-        // Bootstrap component state
-        var _this = _possibleConstructorReturn(this, (Column.__proto__ || Object.getPrototypeOf(Column)).call(this, props));
-        // Always call super first!
+    function TextInput(props) {
+        _classCallCheck(this, TextInput);
+
+        // Set initial state
+        var _this = _possibleConstructorReturn(this, (TextInput.__proto__ || Object.getPrototypeOf(TextInput)).call(this, props));
+        // Call super constructor
 
 
         _this.state = {
-            data: _this.props.column
-        };
-        return _this;
-    }
-
-    /**
-     * Test click event.
-     */
-
-
-    _createClass(Column, [{
-        key: "updateState",
-        value: function updateState() {
-            // Set state alias
-            var curr = this.state;
-
-            // Increase
-            curr.num += 1;
-
-            // Update state
-            this.setState(curr);
-        }
-
-        /**
-         * Updates a single field on the state.
-         */
-
-    }, {
-        key: "updateField",
-        value: function updateField(name, data) {
-            var item_name = name;
-            var item_data = data;
-
-            console.log(item_data);
-
-            // Set state alias
-            var curr = this.state;
-
-            // Update field
-            curr.data[item_name] = item_data;
-
-            // Update state
-            this.setState(curr);
-        }
-
-        /**
-         * Renders the component.
-         */
-
-    }, {
-        key: "render",
-        value: function render() {
-            var name = _react2.default.createElement(
-                "h5",
-                { className: "void" },
-                "no_name"
-            );
-
-            if (this.state.data.name) {
-                name = _react2.default.createElement(
-                    "h5",
-                    null,
-                    this.state.data.name
-                );
-            }
-
-            return _react2.default.createElement(
-                "div",
-                { className: "tool__column" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "tool__column-info" },
-                    name,
-                    _react2.default.createElement(_FieldsText2.default, { name: "Table Name",
-                        value: this.state.data.name,
-                        title: "name",
-                        onChange: this.updateField.bind(this) }),
-                    _react2.default.createElement(_FieldsText2.default, { name: "Table Description",
-                        value: this.state.data.info,
-                        title: "info",
-                        onChange: this.updateField.bind(this) })
-                )
-            );
-        }
-    }]);
-
-    return Column;
-}(_react.Component);
-
-exports.default = Column;
-
-/***/ }),
-/* 239 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Components/FieldsText
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Handles a single column on the blueprint editor.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-// Import libraries
-
-
-// Import local modules
-
-// Main component class
-var FieldsText = function (_Component) {
-    _inherits(FieldsText, _Component);
-
-    function FieldsText(props) {
-        _classCallCheck(this, FieldsText);
-
-        // Bootstrap component state
-        var _this = _possibleConstructorReturn(this, (FieldsText.__proto__ || Object.getPrototypeOf(FieldsText)).call(this, props));
-        // Always call super first!
-
-
-        _this.state = {
-            name: _this.props.name,
-            value: _this.props.value,
+            label: _this.props.label,
             title: _this.props.title,
-            change: _this.props.onChange
+            value: _this.props.value
         };
+
+        // Bind the update function
+        _this.doUpdate = _this.doUpdate.bind(_this);
         return _this;
     }
 
-    _createClass(FieldsText, [{
-        key: "update",
-        value: function update(event) {
-            // Set state alias
+    /**
+     * Update event listener for the input field.
+     *
+     * @param {object} event
+     *      Event object handler
+     */
+
+
+    _createClass(TextInput, [{
+        key: "doUpdate",
+        value: function doUpdate(event) {
+            // Get current state
             var curr = this.state;
 
-            // Update field
+            // Update value
             curr.value = event.target.value;
 
-            if (this.state.change) {
-                this.state.change(this.state.title, this.state.value);
+            // Is there an onChange callback? Then execute
+            if (this.props.onChange) {
+                // onChange should accept the `title` and `value` params
+                this.props.onChange(this.state.title, this.state.value);
             }
 
             // Update state
             this.setState(curr);
         }
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+
     }, {
         key: "render",
         value: function render() {
+            // Return component
             return _react2.default.createElement(
                 "div",
-                { className: "tool__column-fields" },
+                { className: "tool__form-fields" },
                 _react2.default.createElement(
                     "label",
                     null,
-                    this.state.name
+                    this.state.label
                 ),
                 _react2.default.createElement("input", { type: "text",
                     title: this.state.title,
                     value: this.state.value,
-                    onChange: this.update.bind(this) })
+                    onChange: this.doUpdate })
             );
         }
     }]);
 
-    return FieldsText;
+    return TextInput;
 }(_react.Component);
 
-exports.default = FieldsText;
-
-/***/ }),
-/* 240 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * DBFORGE TOOL : Helper/Blueprints
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Helper class for Blueprint creation, handling and field management.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * This is a static class!
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
-// Import libraries
-
-
-var _md = __webpack_require__(241);
-
-var _md2 = _interopRequireDefault(_md);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// Main helper class
-var Blueprints = function () {
-    function Blueprints() {
-        _classCallCheck(this, Blueprints);
-    }
-
-    _createClass(Blueprints, null, [{
-        key: "dataTypeList",
-
-        /**
-         * Returns a list of all the available data types used for columns.
-         *
-         * @return {array}
-         */
-        value: function dataTypeList() {
-            return ["INT", "VARCHAR", "TEXT", "REAL", "FLOAT", "DECIMAL", "BLOB", "BOOLEAN", "DATETIME"];
-        }
-
-        /**
-         * Generates a unique ID.
-         *
-         * @return {string}
-         */
-
-    }, {
-        key: "generateID",
-        value: function generateID() {
-            // Get current RFC date
-            var date = new Date().toISOString();
-
-            // Create and format the hash, for returning
-            var hash = (0, _md2.default)(date + "_DBFORGE").toString();
-            return hash.replace(/^(.{8})(.{4})(.{4})(.{4})(.{12})$/, "$1-$2-$3-$4-$5");
-        }
-
-        /**
-         * Returns an empty, blank blueprint.
-         *
-         * @return {object}
-         */
-
-    }, {
-        key: "generateBlankBlueprint",
-        value: function generateBlankBlueprint() {
-            // Create a blank blueprint
-            var blueprint_data = {
-                id: this.generateID(),
-                name: "",
-                info: "",
-                columns: [],
-                date: new Date().toISOString()
-            };
-            return blueprint_data;
-        }
-
-        /**
-         * Returns an empty, blank column item.
-         *
-         * @return {object}
-         */
-
-    }, {
-        key: "generateBlankColumn",
-        value: function generateBlankColumn() {
-            // All columns are, by default, VARCHAR(255)
-            var column_data = {
-                name: "",
-                type: "VARCHAR",
-                constraint: 255,
-                unsigned: false,
-                auto_increment: false,
-                null: false,
-                unique: false,
-                default: null,
-                meta: {
-                    label: "",
-                    description: "",
-                    placeholder: "",
-                    required: false,
-                    edit: false,
-                    is_primary: false,
-                    user_input: true
-                }
-            };
-            return column_data;
-        }
-    }]);
-
-    return Blueprints;
-}();
-
-exports.default = Blueprints;
-
-/***/ }),
-/* 241 */
-/***/ (function(module, exports, __webpack_require__) {
-
-;(function (root, factory) {
-	if (true) {
-		// CommonJS
-		module.exports = exports = factory(__webpack_require__(242));
-	}
-	else if (typeof define === "function" && define.amd) {
-		// AMD
-		define(["./core"], factory);
-	}
-	else {
-		// Global (browser)
-		factory(root.CryptoJS);
-	}
-}(this, function (CryptoJS) {
-
-	(function (Math) {
-	    // Shortcuts
-	    var C = CryptoJS;
-	    var C_lib = C.lib;
-	    var WordArray = C_lib.WordArray;
-	    var Hasher = C_lib.Hasher;
-	    var C_algo = C.algo;
-
-	    // Constants table
-	    var T = [];
-
-	    // Compute constants
-	    (function () {
-	        for (var i = 0; i < 64; i++) {
-	            T[i] = (Math.abs(Math.sin(i + 1)) * 0x100000000) | 0;
-	        }
-	    }());
-
-	    /**
-	     * MD5 hash algorithm.
-	     */
-	    var MD5 = C_algo.MD5 = Hasher.extend({
-	        _doReset: function () {
-	            this._hash = new WordArray.init([
-	                0x67452301, 0xefcdab89,
-	                0x98badcfe, 0x10325476
-	            ]);
-	        },
-
-	        _doProcessBlock: function (M, offset) {
-	            // Swap endian
-	            for (var i = 0; i < 16; i++) {
-	                // Shortcuts
-	                var offset_i = offset + i;
-	                var M_offset_i = M[offset_i];
-
-	                M[offset_i] = (
-	                    (((M_offset_i << 8)  | (M_offset_i >>> 24)) & 0x00ff00ff) |
-	                    (((M_offset_i << 24) | (M_offset_i >>> 8))  & 0xff00ff00)
-	                );
-	            }
-
-	            // Shortcuts
-	            var H = this._hash.words;
-
-	            var M_offset_0  = M[offset + 0];
-	            var M_offset_1  = M[offset + 1];
-	            var M_offset_2  = M[offset + 2];
-	            var M_offset_3  = M[offset + 3];
-	            var M_offset_4  = M[offset + 4];
-	            var M_offset_5  = M[offset + 5];
-	            var M_offset_6  = M[offset + 6];
-	            var M_offset_7  = M[offset + 7];
-	            var M_offset_8  = M[offset + 8];
-	            var M_offset_9  = M[offset + 9];
-	            var M_offset_10 = M[offset + 10];
-	            var M_offset_11 = M[offset + 11];
-	            var M_offset_12 = M[offset + 12];
-	            var M_offset_13 = M[offset + 13];
-	            var M_offset_14 = M[offset + 14];
-	            var M_offset_15 = M[offset + 15];
-
-	            // Working varialbes
-	            var a = H[0];
-	            var b = H[1];
-	            var c = H[2];
-	            var d = H[3];
-
-	            // Computation
-	            a = FF(a, b, c, d, M_offset_0,  7,  T[0]);
-	            d = FF(d, a, b, c, M_offset_1,  12, T[1]);
-	            c = FF(c, d, a, b, M_offset_2,  17, T[2]);
-	            b = FF(b, c, d, a, M_offset_3,  22, T[3]);
-	            a = FF(a, b, c, d, M_offset_4,  7,  T[4]);
-	            d = FF(d, a, b, c, M_offset_5,  12, T[5]);
-	            c = FF(c, d, a, b, M_offset_6,  17, T[6]);
-	            b = FF(b, c, d, a, M_offset_7,  22, T[7]);
-	            a = FF(a, b, c, d, M_offset_8,  7,  T[8]);
-	            d = FF(d, a, b, c, M_offset_9,  12, T[9]);
-	            c = FF(c, d, a, b, M_offset_10, 17, T[10]);
-	            b = FF(b, c, d, a, M_offset_11, 22, T[11]);
-	            a = FF(a, b, c, d, M_offset_12, 7,  T[12]);
-	            d = FF(d, a, b, c, M_offset_13, 12, T[13]);
-	            c = FF(c, d, a, b, M_offset_14, 17, T[14]);
-	            b = FF(b, c, d, a, M_offset_15, 22, T[15]);
-
-	            a = GG(a, b, c, d, M_offset_1,  5,  T[16]);
-	            d = GG(d, a, b, c, M_offset_6,  9,  T[17]);
-	            c = GG(c, d, a, b, M_offset_11, 14, T[18]);
-	            b = GG(b, c, d, a, M_offset_0,  20, T[19]);
-	            a = GG(a, b, c, d, M_offset_5,  5,  T[20]);
-	            d = GG(d, a, b, c, M_offset_10, 9,  T[21]);
-	            c = GG(c, d, a, b, M_offset_15, 14, T[22]);
-	            b = GG(b, c, d, a, M_offset_4,  20, T[23]);
-	            a = GG(a, b, c, d, M_offset_9,  5,  T[24]);
-	            d = GG(d, a, b, c, M_offset_14, 9,  T[25]);
-	            c = GG(c, d, a, b, M_offset_3,  14, T[26]);
-	            b = GG(b, c, d, a, M_offset_8,  20, T[27]);
-	            a = GG(a, b, c, d, M_offset_13, 5,  T[28]);
-	            d = GG(d, a, b, c, M_offset_2,  9,  T[29]);
-	            c = GG(c, d, a, b, M_offset_7,  14, T[30]);
-	            b = GG(b, c, d, a, M_offset_12, 20, T[31]);
-
-	            a = HH(a, b, c, d, M_offset_5,  4,  T[32]);
-	            d = HH(d, a, b, c, M_offset_8,  11, T[33]);
-	            c = HH(c, d, a, b, M_offset_11, 16, T[34]);
-	            b = HH(b, c, d, a, M_offset_14, 23, T[35]);
-	            a = HH(a, b, c, d, M_offset_1,  4,  T[36]);
-	            d = HH(d, a, b, c, M_offset_4,  11, T[37]);
-	            c = HH(c, d, a, b, M_offset_7,  16, T[38]);
-	            b = HH(b, c, d, a, M_offset_10, 23, T[39]);
-	            a = HH(a, b, c, d, M_offset_13, 4,  T[40]);
-	            d = HH(d, a, b, c, M_offset_0,  11, T[41]);
-	            c = HH(c, d, a, b, M_offset_3,  16, T[42]);
-	            b = HH(b, c, d, a, M_offset_6,  23, T[43]);
-	            a = HH(a, b, c, d, M_offset_9,  4,  T[44]);
-	            d = HH(d, a, b, c, M_offset_12, 11, T[45]);
-	            c = HH(c, d, a, b, M_offset_15, 16, T[46]);
-	            b = HH(b, c, d, a, M_offset_2,  23, T[47]);
-
-	            a = II(a, b, c, d, M_offset_0,  6,  T[48]);
-	            d = II(d, a, b, c, M_offset_7,  10, T[49]);
-	            c = II(c, d, a, b, M_offset_14, 15, T[50]);
-	            b = II(b, c, d, a, M_offset_5,  21, T[51]);
-	            a = II(a, b, c, d, M_offset_12, 6,  T[52]);
-	            d = II(d, a, b, c, M_offset_3,  10, T[53]);
-	            c = II(c, d, a, b, M_offset_10, 15, T[54]);
-	            b = II(b, c, d, a, M_offset_1,  21, T[55]);
-	            a = II(a, b, c, d, M_offset_8,  6,  T[56]);
-	            d = II(d, a, b, c, M_offset_15, 10, T[57]);
-	            c = II(c, d, a, b, M_offset_6,  15, T[58]);
-	            b = II(b, c, d, a, M_offset_13, 21, T[59]);
-	            a = II(a, b, c, d, M_offset_4,  6,  T[60]);
-	            d = II(d, a, b, c, M_offset_11, 10, T[61]);
-	            c = II(c, d, a, b, M_offset_2,  15, T[62]);
-	            b = II(b, c, d, a, M_offset_9,  21, T[63]);
-
-	            // Intermediate hash value
-	            H[0] = (H[0] + a) | 0;
-	            H[1] = (H[1] + b) | 0;
-	            H[2] = (H[2] + c) | 0;
-	            H[3] = (H[3] + d) | 0;
-	        },
-
-	        _doFinalize: function () {
-	            // Shortcuts
-	            var data = this._data;
-	            var dataWords = data.words;
-
-	            var nBitsTotal = this._nDataBytes * 8;
-	            var nBitsLeft = data.sigBytes * 8;
-
-	            // Add padding
-	            dataWords[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32);
-
-	            var nBitsTotalH = Math.floor(nBitsTotal / 0x100000000);
-	            var nBitsTotalL = nBitsTotal;
-	            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 15] = (
-	                (((nBitsTotalH << 8)  | (nBitsTotalH >>> 24)) & 0x00ff00ff) |
-	                (((nBitsTotalH << 24) | (nBitsTotalH >>> 8))  & 0xff00ff00)
-	            );
-	            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
-	                (((nBitsTotalL << 8)  | (nBitsTotalL >>> 24)) & 0x00ff00ff) |
-	                (((nBitsTotalL << 24) | (nBitsTotalL >>> 8))  & 0xff00ff00)
-	            );
-
-	            data.sigBytes = (dataWords.length + 1) * 4;
-
-	            // Hash final blocks
-	            this._process();
-
-	            // Shortcuts
-	            var hash = this._hash;
-	            var H = hash.words;
-
-	            // Swap endian
-	            for (var i = 0; i < 4; i++) {
-	                // Shortcut
-	                var H_i = H[i];
-
-	                H[i] = (((H_i << 8)  | (H_i >>> 24)) & 0x00ff00ff) |
-	                       (((H_i << 24) | (H_i >>> 8))  & 0xff00ff00);
-	            }
-
-	            // Return final computed hash
-	            return hash;
-	        },
-
-	        clone: function () {
-	            var clone = Hasher.clone.call(this);
-	            clone._hash = this._hash.clone();
-
-	            return clone;
-	        }
-	    });
-
-	    function FF(a, b, c, d, x, s, t) {
-	        var n = a + ((b & c) | (~b & d)) + x + t;
-	        return ((n << s) | (n >>> (32 - s))) + b;
-	    }
-
-	    function GG(a, b, c, d, x, s, t) {
-	        var n = a + ((b & d) | (c & ~d)) + x + t;
-	        return ((n << s) | (n >>> (32 - s))) + b;
-	    }
-
-	    function HH(a, b, c, d, x, s, t) {
-	        var n = a + (b ^ c ^ d) + x + t;
-	        return ((n << s) | (n >>> (32 - s))) + b;
-	    }
-
-	    function II(a, b, c, d, x, s, t) {
-	        var n = a + (c ^ (b | ~d)) + x + t;
-	        return ((n << s) | (n >>> (32 - s))) + b;
-	    }
-
-	    /**
-	     * Shortcut function to the hasher's object interface.
-	     *
-	     * @param {WordArray|string} message The message to hash.
-	     *
-	     * @return {WordArray} The hash.
-	     *
-	     * @static
-	     *
-	     * @example
-	     *
-	     *     var hash = CryptoJS.MD5('message');
-	     *     var hash = CryptoJS.MD5(wordArray);
-	     */
-	    C.MD5 = Hasher._createHelper(MD5);
-
-	    /**
-	     * Shortcut function to the HMAC's object interface.
-	     *
-	     * @param {WordArray|string} message The message to hash.
-	     * @param {WordArray|string} key The secret key.
-	     *
-	     * @return {WordArray} The HMAC.
-	     *
-	     * @static
-	     *
-	     * @example
-	     *
-	     *     var hmac = CryptoJS.HmacMD5(message, key);
-	     */
-	    C.HmacMD5 = Hasher._createHmacHelper(MD5);
-	}(Math));
-
-
-	return CryptoJS.MD5;
-
-}));
-
-/***/ }),
-/* 242 */
-/***/ (function(module, exports, __webpack_require__) {
-
-;(function (root, factory) {
-	if (true) {
-		// CommonJS
-		module.exports = exports = factory();
-	}
-	else if (typeof define === "function" && define.amd) {
-		// AMD
-		define([], factory);
-	}
-	else {
-		// Global (browser)
-		root.CryptoJS = factory();
-	}
-}(this, function () {
-
-	/**
-	 * CryptoJS core components.
-	 */
-	var CryptoJS = CryptoJS || (function (Math, undefined) {
-	    /*
-	     * Local polyfil of Object.create
-	     */
-	    var create = Object.create || (function () {
-	        function F() {};
-
-	        return function (obj) {
-	            var subtype;
-
-	            F.prototype = obj;
-
-	            subtype = new F();
-
-	            F.prototype = null;
-
-	            return subtype;
-	        };
-	    }())
-
-	    /**
-	     * CryptoJS namespace.
-	     */
-	    var C = {};
-
-	    /**
-	     * Library namespace.
-	     */
-	    var C_lib = C.lib = {};
-
-	    /**
-	     * Base object for prototypal inheritance.
-	     */
-	    var Base = C_lib.Base = (function () {
-
-
-	        return {
-	            /**
-	             * Creates a new object that inherits from this object.
-	             *
-	             * @param {Object} overrides Properties to copy into the new object.
-	             *
-	             * @return {Object} The new object.
-	             *
-	             * @static
-	             *
-	             * @example
-	             *
-	             *     var MyType = CryptoJS.lib.Base.extend({
-	             *         field: 'value',
-	             *
-	             *         method: function () {
-	             *         }
-	             *     });
-	             */
-	            extend: function (overrides) {
-	                // Spawn
-	                var subtype = create(this);
-
-	                // Augment
-	                if (overrides) {
-	                    subtype.mixIn(overrides);
-	                }
-
-	                // Create default initializer
-	                if (!subtype.hasOwnProperty('init') || this.init === subtype.init) {
-	                    subtype.init = function () {
-	                        subtype.$super.init.apply(this, arguments);
-	                    };
-	                }
-
-	                // Initializer's prototype is the subtype object
-	                subtype.init.prototype = subtype;
-
-	                // Reference supertype
-	                subtype.$super = this;
-
-	                return subtype;
-	            },
-
-	            /**
-	             * Extends this object and runs the init method.
-	             * Arguments to create() will be passed to init().
-	             *
-	             * @return {Object} The new object.
-	             *
-	             * @static
-	             *
-	             * @example
-	             *
-	             *     var instance = MyType.create();
-	             */
-	            create: function () {
-	                var instance = this.extend();
-	                instance.init.apply(instance, arguments);
-
-	                return instance;
-	            },
-
-	            /**
-	             * Initializes a newly created object.
-	             * Override this method to add some logic when your objects are created.
-	             *
-	             * @example
-	             *
-	             *     var MyType = CryptoJS.lib.Base.extend({
-	             *         init: function () {
-	             *             // ...
-	             *         }
-	             *     });
-	             */
-	            init: function () {
-	            },
-
-	            /**
-	             * Copies properties into this object.
-	             *
-	             * @param {Object} properties The properties to mix in.
-	             *
-	             * @example
-	             *
-	             *     MyType.mixIn({
-	             *         field: 'value'
-	             *     });
-	             */
-	            mixIn: function (properties) {
-	                for (var propertyName in properties) {
-	                    if (properties.hasOwnProperty(propertyName)) {
-	                        this[propertyName] = properties[propertyName];
-	                    }
-	                }
-
-	                // IE won't copy toString using the loop above
-	                if (properties.hasOwnProperty('toString')) {
-	                    this.toString = properties.toString;
-	                }
-	            },
-
-	            /**
-	             * Creates a copy of this object.
-	             *
-	             * @return {Object} The clone.
-	             *
-	             * @example
-	             *
-	             *     var clone = instance.clone();
-	             */
-	            clone: function () {
-	                return this.init.prototype.extend(this);
-	            }
-	        };
-	    }());
-
-	    /**
-	     * An array of 32-bit words.
-	     *
-	     * @property {Array} words The array of 32-bit words.
-	     * @property {number} sigBytes The number of significant bytes in this word array.
-	     */
-	    var WordArray = C_lib.WordArray = Base.extend({
-	        /**
-	         * Initializes a newly created word array.
-	         *
-	         * @param {Array} words (Optional) An array of 32-bit words.
-	         * @param {number} sigBytes (Optional) The number of significant bytes in the words.
-	         *
-	         * @example
-	         *
-	         *     var wordArray = CryptoJS.lib.WordArray.create();
-	         *     var wordArray = CryptoJS.lib.WordArray.create([0x00010203, 0x04050607]);
-	         *     var wordArray = CryptoJS.lib.WordArray.create([0x00010203, 0x04050607], 6);
-	         */
-	        init: function (words, sigBytes) {
-	            words = this.words = words || [];
-
-	            if (sigBytes != undefined) {
-	                this.sigBytes = sigBytes;
-	            } else {
-	                this.sigBytes = words.length * 4;
-	            }
-	        },
-
-	        /**
-	         * Converts this word array to a string.
-	         *
-	         * @param {Encoder} encoder (Optional) The encoding strategy to use. Default: CryptoJS.enc.Hex
-	         *
-	         * @return {string} The stringified word array.
-	         *
-	         * @example
-	         *
-	         *     var string = wordArray + '';
-	         *     var string = wordArray.toString();
-	         *     var string = wordArray.toString(CryptoJS.enc.Utf8);
-	         */
-	        toString: function (encoder) {
-	            return (encoder || Hex).stringify(this);
-	        },
-
-	        /**
-	         * Concatenates a word array to this word array.
-	         *
-	         * @param {WordArray} wordArray The word array to append.
-	         *
-	         * @return {WordArray} This word array.
-	         *
-	         * @example
-	         *
-	         *     wordArray1.concat(wordArray2);
-	         */
-	        concat: function (wordArray) {
-	            // Shortcuts
-	            var thisWords = this.words;
-	            var thatWords = wordArray.words;
-	            var thisSigBytes = this.sigBytes;
-	            var thatSigBytes = wordArray.sigBytes;
-
-	            // Clamp excess bits
-	            this.clamp();
-
-	            // Concat
-	            if (thisSigBytes % 4) {
-	                // Copy one byte at a time
-	                for (var i = 0; i < thatSigBytes; i++) {
-	                    var thatByte = (thatWords[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
-	                    thisWords[(thisSigBytes + i) >>> 2] |= thatByte << (24 - ((thisSigBytes + i) % 4) * 8);
-	                }
-	            } else {
-	                // Copy one word at a time
-	                for (var i = 0; i < thatSigBytes; i += 4) {
-	                    thisWords[(thisSigBytes + i) >>> 2] = thatWords[i >>> 2];
-	                }
-	            }
-	            this.sigBytes += thatSigBytes;
-
-	            // Chainable
-	            return this;
-	        },
-
-	        /**
-	         * Removes insignificant bits.
-	         *
-	         * @example
-	         *
-	         *     wordArray.clamp();
-	         */
-	        clamp: function () {
-	            // Shortcuts
-	            var words = this.words;
-	            var sigBytes = this.sigBytes;
-
-	            // Clamp
-	            words[sigBytes >>> 2] &= 0xffffffff << (32 - (sigBytes % 4) * 8);
-	            words.length = Math.ceil(sigBytes / 4);
-	        },
-
-	        /**
-	         * Creates a copy of this word array.
-	         *
-	         * @return {WordArray} The clone.
-	         *
-	         * @example
-	         *
-	         *     var clone = wordArray.clone();
-	         */
-	        clone: function () {
-	            var clone = Base.clone.call(this);
-	            clone.words = this.words.slice(0);
-
-	            return clone;
-	        },
-
-	        /**
-	         * Creates a word array filled with random bytes.
-	         *
-	         * @param {number} nBytes The number of random bytes to generate.
-	         *
-	         * @return {WordArray} The random word array.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var wordArray = CryptoJS.lib.WordArray.random(16);
-	         */
-	        random: function (nBytes) {
-	            var words = [];
-
-	            var r = (function (m_w) {
-	                var m_w = m_w;
-	                var m_z = 0x3ade68b1;
-	                var mask = 0xffffffff;
-
-	                return function () {
-	                    m_z = (0x9069 * (m_z & 0xFFFF) + (m_z >> 0x10)) & mask;
-	                    m_w = (0x4650 * (m_w & 0xFFFF) + (m_w >> 0x10)) & mask;
-	                    var result = ((m_z << 0x10) + m_w) & mask;
-	                    result /= 0x100000000;
-	                    result += 0.5;
-	                    return result * (Math.random() > .5 ? 1 : -1);
-	                }
-	            });
-
-	            for (var i = 0, rcache; i < nBytes; i += 4) {
-	                var _r = r((rcache || Math.random()) * 0x100000000);
-
-	                rcache = _r() * 0x3ade67b7;
-	                words.push((_r() * 0x100000000) | 0);
-	            }
-
-	            return new WordArray.init(words, nBytes);
-	        }
-	    });
-
-	    /**
-	     * Encoder namespace.
-	     */
-	    var C_enc = C.enc = {};
-
-	    /**
-	     * Hex encoding strategy.
-	     */
-	    var Hex = C_enc.Hex = {
-	        /**
-	         * Converts a word array to a hex string.
-	         *
-	         * @param {WordArray} wordArray The word array.
-	         *
-	         * @return {string} The hex string.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var hexString = CryptoJS.enc.Hex.stringify(wordArray);
-	         */
-	        stringify: function (wordArray) {
-	            // Shortcuts
-	            var words = wordArray.words;
-	            var sigBytes = wordArray.sigBytes;
-
-	            // Convert
-	            var hexChars = [];
-	            for (var i = 0; i < sigBytes; i++) {
-	                var bite = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
-	                hexChars.push((bite >>> 4).toString(16));
-	                hexChars.push((bite & 0x0f).toString(16));
-	            }
-
-	            return hexChars.join('');
-	        },
-
-	        /**
-	         * Converts a hex string to a word array.
-	         *
-	         * @param {string} hexStr The hex string.
-	         *
-	         * @return {WordArray} The word array.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var wordArray = CryptoJS.enc.Hex.parse(hexString);
-	         */
-	        parse: function (hexStr) {
-	            // Shortcut
-	            var hexStrLength = hexStr.length;
-
-	            // Convert
-	            var words = [];
-	            for (var i = 0; i < hexStrLength; i += 2) {
-	                words[i >>> 3] |= parseInt(hexStr.substr(i, 2), 16) << (24 - (i % 8) * 4);
-	            }
-
-	            return new WordArray.init(words, hexStrLength / 2);
-	        }
-	    };
-
-	    /**
-	     * Latin1 encoding strategy.
-	     */
-	    var Latin1 = C_enc.Latin1 = {
-	        /**
-	         * Converts a word array to a Latin1 string.
-	         *
-	         * @param {WordArray} wordArray The word array.
-	         *
-	         * @return {string} The Latin1 string.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var latin1String = CryptoJS.enc.Latin1.stringify(wordArray);
-	         */
-	        stringify: function (wordArray) {
-	            // Shortcuts
-	            var words = wordArray.words;
-	            var sigBytes = wordArray.sigBytes;
-
-	            // Convert
-	            var latin1Chars = [];
-	            for (var i = 0; i < sigBytes; i++) {
-	                var bite = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
-	                latin1Chars.push(String.fromCharCode(bite));
-	            }
-
-	            return latin1Chars.join('');
-	        },
-
-	        /**
-	         * Converts a Latin1 string to a word array.
-	         *
-	         * @param {string} latin1Str The Latin1 string.
-	         *
-	         * @return {WordArray} The word array.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var wordArray = CryptoJS.enc.Latin1.parse(latin1String);
-	         */
-	        parse: function (latin1Str) {
-	            // Shortcut
-	            var latin1StrLength = latin1Str.length;
-
-	            // Convert
-	            var words = [];
-	            for (var i = 0; i < latin1StrLength; i++) {
-	                words[i >>> 2] |= (latin1Str.charCodeAt(i) & 0xff) << (24 - (i % 4) * 8);
-	            }
-
-	            return new WordArray.init(words, latin1StrLength);
-	        }
-	    };
-
-	    /**
-	     * UTF-8 encoding strategy.
-	     */
-	    var Utf8 = C_enc.Utf8 = {
-	        /**
-	         * Converts a word array to a UTF-8 string.
-	         *
-	         * @param {WordArray} wordArray The word array.
-	         *
-	         * @return {string} The UTF-8 string.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var utf8String = CryptoJS.enc.Utf8.stringify(wordArray);
-	         */
-	        stringify: function (wordArray) {
-	            try {
-	                return decodeURIComponent(escape(Latin1.stringify(wordArray)));
-	            } catch (e) {
-	                throw new Error('Malformed UTF-8 data');
-	            }
-	        },
-
-	        /**
-	         * Converts a UTF-8 string to a word array.
-	         *
-	         * @param {string} utf8Str The UTF-8 string.
-	         *
-	         * @return {WordArray} The word array.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var wordArray = CryptoJS.enc.Utf8.parse(utf8String);
-	         */
-	        parse: function (utf8Str) {
-	            return Latin1.parse(unescape(encodeURIComponent(utf8Str)));
-	        }
-	    };
-
-	    /**
-	     * Abstract buffered block algorithm template.
-	     *
-	     * The property blockSize must be implemented in a concrete subtype.
-	     *
-	     * @property {number} _minBufferSize The number of blocks that should be kept unprocessed in the buffer. Default: 0
-	     */
-	    var BufferedBlockAlgorithm = C_lib.BufferedBlockAlgorithm = Base.extend({
-	        /**
-	         * Resets this block algorithm's data buffer to its initial state.
-	         *
-	         * @example
-	         *
-	         *     bufferedBlockAlgorithm.reset();
-	         */
-	        reset: function () {
-	            // Initial values
-	            this._data = new WordArray.init();
-	            this._nDataBytes = 0;
-	        },
-
-	        /**
-	         * Adds new data to this block algorithm's buffer.
-	         *
-	         * @param {WordArray|string} data The data to append. Strings are converted to a WordArray using UTF-8.
-	         *
-	         * @example
-	         *
-	         *     bufferedBlockAlgorithm._append('data');
-	         *     bufferedBlockAlgorithm._append(wordArray);
-	         */
-	        _append: function (data) {
-	            // Convert string to WordArray, else assume WordArray already
-	            if (typeof data == 'string') {
-	                data = Utf8.parse(data);
-	            }
-
-	            // Append
-	            this._data.concat(data);
-	            this._nDataBytes += data.sigBytes;
-	        },
-
-	        /**
-	         * Processes available data blocks.
-	         *
-	         * This method invokes _doProcessBlock(offset), which must be implemented by a concrete subtype.
-	         *
-	         * @param {boolean} doFlush Whether all blocks and partial blocks should be processed.
-	         *
-	         * @return {WordArray} The processed data.
-	         *
-	         * @example
-	         *
-	         *     var processedData = bufferedBlockAlgorithm._process();
-	         *     var processedData = bufferedBlockAlgorithm._process(!!'flush');
-	         */
-	        _process: function (doFlush) {
-	            // Shortcuts
-	            var data = this._data;
-	            var dataWords = data.words;
-	            var dataSigBytes = data.sigBytes;
-	            var blockSize = this.blockSize;
-	            var blockSizeBytes = blockSize * 4;
-
-	            // Count blocks ready
-	            var nBlocksReady = dataSigBytes / blockSizeBytes;
-	            if (doFlush) {
-	                // Round up to include partial blocks
-	                nBlocksReady = Math.ceil(nBlocksReady);
-	            } else {
-	                // Round down to include only full blocks,
-	                // less the number of blocks that must remain in the buffer
-	                nBlocksReady = Math.max((nBlocksReady | 0) - this._minBufferSize, 0);
-	            }
-
-	            // Count words ready
-	            var nWordsReady = nBlocksReady * blockSize;
-
-	            // Count bytes ready
-	            var nBytesReady = Math.min(nWordsReady * 4, dataSigBytes);
-
-	            // Process blocks
-	            if (nWordsReady) {
-	                for (var offset = 0; offset < nWordsReady; offset += blockSize) {
-	                    // Perform concrete-algorithm logic
-	                    this._doProcessBlock(dataWords, offset);
-	                }
-
-	                // Remove processed words
-	                var processedWords = dataWords.splice(0, nWordsReady);
-	                data.sigBytes -= nBytesReady;
-	            }
-
-	            // Return processed words
-	            return new WordArray.init(processedWords, nBytesReady);
-	        },
-
-	        /**
-	         * Creates a copy of this object.
-	         *
-	         * @return {Object} The clone.
-	         *
-	         * @example
-	         *
-	         *     var clone = bufferedBlockAlgorithm.clone();
-	         */
-	        clone: function () {
-	            var clone = Base.clone.call(this);
-	            clone._data = this._data.clone();
-
-	            return clone;
-	        },
-
-	        _minBufferSize: 0
-	    });
-
-	    /**
-	     * Abstract hasher template.
-	     *
-	     * @property {number} blockSize The number of 32-bit words this hasher operates on. Default: 16 (512 bits)
-	     */
-	    var Hasher = C_lib.Hasher = BufferedBlockAlgorithm.extend({
-	        /**
-	         * Configuration options.
-	         */
-	        cfg: Base.extend(),
-
-	        /**
-	         * Initializes a newly created hasher.
-	         *
-	         * @param {Object} cfg (Optional) The configuration options to use for this hash computation.
-	         *
-	         * @example
-	         *
-	         *     var hasher = CryptoJS.algo.SHA256.create();
-	         */
-	        init: function (cfg) {
-	            // Apply config defaults
-	            this.cfg = this.cfg.extend(cfg);
-
-	            // Set initial values
-	            this.reset();
-	        },
-
-	        /**
-	         * Resets this hasher to its initial state.
-	         *
-	         * @example
-	         *
-	         *     hasher.reset();
-	         */
-	        reset: function () {
-	            // Reset data buffer
-	            BufferedBlockAlgorithm.reset.call(this);
-
-	            // Perform concrete-hasher logic
-	            this._doReset();
-	        },
-
-	        /**
-	         * Updates this hasher with a message.
-	         *
-	         * @param {WordArray|string} messageUpdate The message to append.
-	         *
-	         * @return {Hasher} This hasher.
-	         *
-	         * @example
-	         *
-	         *     hasher.update('message');
-	         *     hasher.update(wordArray);
-	         */
-	        update: function (messageUpdate) {
-	            // Append
-	            this._append(messageUpdate);
-
-	            // Update the hash
-	            this._process();
-
-	            // Chainable
-	            return this;
-	        },
-
-	        /**
-	         * Finalizes the hash computation.
-	         * Note that the finalize operation is effectively a destructive, read-once operation.
-	         *
-	         * @param {WordArray|string} messageUpdate (Optional) A final message update.
-	         *
-	         * @return {WordArray} The hash.
-	         *
-	         * @example
-	         *
-	         *     var hash = hasher.finalize();
-	         *     var hash = hasher.finalize('message');
-	         *     var hash = hasher.finalize(wordArray);
-	         */
-	        finalize: function (messageUpdate) {
-	            // Final message update
-	            if (messageUpdate) {
-	                this._append(messageUpdate);
-	            }
-
-	            // Perform concrete-hasher logic
-	            var hash = this._doFinalize();
-
-	            return hash;
-	        },
-
-	        blockSize: 512/32,
-
-	        /**
-	         * Creates a shortcut function to a hasher's object interface.
-	         *
-	         * @param {Hasher} hasher The hasher to create a helper for.
-	         *
-	         * @return {Function} The shortcut function.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var SHA256 = CryptoJS.lib.Hasher._createHelper(CryptoJS.algo.SHA256);
-	         */
-	        _createHelper: function (hasher) {
-	            return function (message, cfg) {
-	                return new hasher.init(cfg).finalize(message);
-	            };
-	        },
-
-	        /**
-	         * Creates a shortcut function to the HMAC's object interface.
-	         *
-	         * @param {Hasher} hasher The hasher to use in this HMAC helper.
-	         *
-	         * @return {Function} The shortcut function.
-	         *
-	         * @static
-	         *
-	         * @example
-	         *
-	         *     var HmacSHA256 = CryptoJS.lib.Hasher._createHmacHelper(CryptoJS.algo.SHA256);
-	         */
-	        _createHmacHelper: function (hasher) {
-	            return function (message, key) {
-	                return new C_algo.HMAC.init(hasher, key).finalize(message);
-	            };
-	        }
-	    });
-
-	    /**
-	     * Algorithm namespace.
-	     */
-	    var C_algo = C.algo = {};
-
-	    return C;
-	}(Math));
-
-
-	return CryptoJS;
-
-}));
-
-/***/ }),
-/* 243 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(57);
-
-var _Stacks = __webpack_require__(103);
-
-var _Stacks2 = _interopRequireDefault(_Stacks);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Page/Load
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Shows a list of all the blueprints stored locally, for loading.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-// Import libraries
-
-
-// Import local modules
-
-
-// Main component class
-var Load = function (_Component) {
-    _inherits(Load, _Component);
-
-    /**
-     * Component constructor.
-     *
-     * @param {object} props
-     */
-    function Load(props) {
-        _classCallCheck(this, Load);
-
-        // Create an instance of stacks
-        var _this = _possibleConstructorReturn(this, (Load.__proto__ || Object.getPrototypeOf(Load)).call(this, props));
-        // Always call super first!
-
-
-        _this.stacks = new _Stacks2.default("dbforge_stack");
-
-        // Bootstrap component state
-        _this.state = {
-            blueprint_list: _this.stacks.browse()
-        };
-        return _this;
-    }
-
-    /**
-     * Renders the component.
-     */
-
-
-    _createClass(Load, [{
-        key: "render",
-        value: function render() {
-            // Handles listing
-            var item_list = [];
-
-            // Blueprint list alias
-            var blueprints = this.state.blueprint_list;
-
-            // Only fill list if one or more items exist
-            if (blueprints.length > 0) {
-                for (var n in blueprints) {
-                    // Item alias
-                    var item = blueprints[n];
-                    var link = "/edit/" + item.id;
-
-                    // Push
-                    item_list = _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { to: link },
-                        item.name
-                    );
-                }
-            } else {
-                item_list = _react2.default.createElement(
-                    "div",
-                    { className: "tool__load-void" },
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        "Nothing to see here, shoo!"
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        _react2.default.createElement(
-                            "a",
-                            { href: "/" },
-                            _react2.default.createElement(
-                                "strong",
-                                null,
-                                "GO BACK TO WHERE YOU CAME FROM!"
-                            )
-                        )
-                    )
-                );
-            }
-
-            return _react2.default.createElement(
-                "div",
-                { className: "tool__edit" },
-                _react2.default.createElement(
-                    "h4",
-                    null,
-                    "Load"
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "tool__load-list" },
-                    item_list
-                )
-            );
-        }
-    }]);
-
-    return Load;
-}(_react.Component);
-
-exports.default = Load;
+exports.default = TextInput;
 
 /***/ })
 /******/ ]);

@@ -7,10 +7,10 @@
  * @since       3.0.0
  */
 
-// Import libraries
+// Import base modules
 import React, { Component } from "react";
 
-// Import local modules
+// Import application components
 
 // Main component class
 export default class Dummy extends Component {
@@ -18,12 +18,13 @@ export default class Dummy extends Component {
      * Component constructor.
      *
      * @param {object} props
+     *      Component props object
      */
     constructor(props) {
-        // Always call super first!
+        // Call super constructor
         super(props);
-        
-        // Bootstrap component state
+    
+        // Set initial state
         this.state = {
             num: 0
         };
@@ -45,6 +46,8 @@ export default class Dummy extends Component {
     
     /**
      * Renders the component.
+     *
+     * @returns {XML}
      */
     render() {
         return (
