@@ -14,6 +14,7 @@ import ActionButton from "Components/ActionButton";
 import LinkButton from "Components/LinkButton";
 import TextInput from "Components/TextInput";
 import ToggleSwitch from "Components/ToggleSwitch";
+import SelectBox from "Components/SelectBox";
 
 // Main component class
 export default class Home extends Component {
@@ -29,6 +30,31 @@ export default class Home extends Component {
         
         // Set initial state
         this.state = {};
+        
+        // Select box dummy options
+        this.select = {
+            title: "select_box",
+            label: "Test Select Box That Works",
+            value: "KOOKOOKA!",
+            list: [
+                {
+                    name: "option 1",
+                    value: "1"
+                },
+                {
+                    name: "option 2",
+                    value: "2"
+                },
+                {
+                    name: "option 3",
+                    value: "3"
+                },
+                {
+                    name: "kookabunga",
+                    value: "KOOKOOKA!"
+                }
+            ]
+        };
     }
 
     /**
@@ -47,12 +73,19 @@ export default class Home extends Component {
         return (
             <div className="tool__home">
                 <h4>Home</h4>
+                <LinkButton className="hello-dumbo" to="/load">
+                    Load
+                </LinkButton>
                 <LinkButton className="hello-dumbo" to="/edit">
                     I am a Button
                 </LinkButton>
                 <ActionButton action={this.testAction}>
                     No Action! :(
                 </ActionButton>
+                <SelectBox label={this.select.label}
+                           title={this.select.title}
+                           value={this.select.value}
+                           list={this.select.list}/>
                 <ToggleSwitch label="Oi?" title="gogo" value={true}/>
                 <TextInput label="Hello" title="demo" value="Namu"/>
             </div>

@@ -9,6 +9,7 @@
 // Import local modules
 import Home from "Page/Home";
 import Edit from "Page/Edit";
+import Load from "Page/Load";
 
 /**
  * Array containing all possible menu routes.
@@ -26,7 +27,7 @@ const AppRoute = [
         name: "Load",
         path: "/load",
         exact: false,
-        component: Home
+        component: Load
     },
     {
         name: "Edit",

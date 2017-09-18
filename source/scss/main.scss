@@ -1,0 +1,68 @@
+$fa-font-path: "~../../public/fonts/";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-size: percentage(1/6);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+.tool__alerts,
+.tool__alerts.out {
+    max-height: 0;
+    background: #391;
+    padding: 0;
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.tool__alerts.in {
+    max-height: 1280px;
+    padding: 10px;
+    opacity: 1;
+}
+
+.tool__header-info {
+    color: #000;
+    background: transparentize(#fff, .25);
+    width: 100vw;
+    height: 100vh;
+    max-height: 0;
+    padding: 0 2rem;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s;
+    
+    &.in {
+        max-height: 100vh;
+        padding: 2rem;
+        opacity: 1;
+    }
+}

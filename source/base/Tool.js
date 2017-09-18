@@ -14,8 +14,7 @@ import { Route } from "react-router-dom";
 // Import application components
 import { AppRoute } from "Routes/Routes";
 import Header from "Base/ToolHeader";
-import Home from "Page/Home";
-import Edit from "Page/Edit";
+import Footer from "Base/ToolFooter";
 
 // Main component class
 export default class Tool extends Component {
@@ -42,7 +41,6 @@ export default class Tool extends Component {
     
         // Define home menu routes
         this.routes = AppRoute;
-        console.log(this.routes);
     }
     
     /**
@@ -75,8 +73,9 @@ export default class Tool extends Component {
         // Render the component
         return (
             <div className="tool__wrap">
-                <Header />
+                <Header/>
                 {routes}
+                <Footer/>
             </div>
         );
     }
