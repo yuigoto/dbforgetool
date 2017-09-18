@@ -11703,6 +11703,10 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ActionButton = __webpack_require__(238);
+
+var _ActionButton2 = _interopRequireDefault(_ActionButton);
+
 var _LinkButton = __webpack_require__(104);
 
 var _LinkButton2 = _interopRequireDefault(_LinkButton);
@@ -11710,6 +11714,10 @@ var _LinkButton2 = _interopRequireDefault(_LinkButton);
 var _TextInput = __webpack_require__(236);
 
 var _TextInput2 = _interopRequireDefault(_TextInput);
+
+var _ToggleSwitch = __webpack_require__(237);
+
+var _ToggleSwitch2 = _interopRequireDefault(_ToggleSwitch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11754,13 +11762,23 @@ var Home = function (_Component) {
     }
 
     /**
-     * Renders the component.
-     *
-     * @returns {XML}
+     * This is just a test action, which logs something to the console.
      */
 
 
     _createClass(Home, [{
+        key: "testAction",
+        value: function testAction() {
+            console.log("Hello from the Test Action!");
+        }
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+
+    }, {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
@@ -11776,6 +11794,12 @@ var Home = function (_Component) {
                     { className: "hello-dumbo", to: "/edit" },
                     "I am a Button"
                 ),
+                _react2.default.createElement(
+                    _ActionButton2.default,
+                    { action: this.testAction },
+                    "No Action! :("
+                ),
+                _react2.default.createElement(_ToggleSwitch2.default, { label: "Oi?", title: "gogo", value: true }),
                 _react2.default.createElement(_TextInput2.default, { label: "Hello", title: "demo", value: "Namu" })
             );
         }
@@ -11850,8 +11874,6 @@ var LinkButton = function (_Component) {
             to: _this.props.to
         };
 
-        console.log(_this.props.children);
-
         // Bind redirect
         _this.redirectTo = _this.redirectTo.bind(_this);
         return _this;
@@ -11894,7 +11916,7 @@ var LinkButton = function (_Component) {
             var buttonProp = {};
 
             // Build properties
-            if (this.state.className != "") buttonProp.className = curr.className;
+            if (curr.className != "") buttonProp.className = curr.className;
 
             // Return component
             return _react2.default.createElement(
@@ -27279,6 +27301,10 @@ var _reactRouterDom = __webpack_require__(38);
 
 var _Routes = __webpack_require__(235);
 
+var _ToolHeader = __webpack_require__(239);
+
+var _ToolHeader2 = _interopRequireDefault(_ToolHeader);
+
 var _Home = __webpack_require__(103);
 
 var _Home2 = _interopRequireDefault(_Home);
@@ -27376,6 +27402,7 @@ var Tool = function (_Component) {
             return _react2.default.createElement(
                 "div",
                 { className: "tool__wrap" },
+                _react2.default.createElement(_ToolHeader2.default, null),
                 routes
             );
         }
@@ -27520,7 +27547,7 @@ var TextInput = function (_Component) {
             // Is there an onChange callback? Then execute
             if (this.props.onChange) {
                 // onChange should accept the `title` and `value` params
-                this.props.onChange(this.state.title, this.state.value);
+                this.props.onChange(curr.title, curr.value);
             }
 
             // Update state
@@ -27557,6 +27584,320 @@ var TextInput = function (_Component) {
 }(_react.Component);
 
 exports.default = TextInput;
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Components/ToggleSwitch
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Toggle switch for boolean values, using a checkbox, wrapped in a div 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * with a label.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+// Import bae module
+
+
+// Main component class
+var ToggleSwitch = function (_Component) {
+    _inherits(ToggleSwitch, _Component);
+
+    /**
+     * Component constructor.
+     *
+     * @param {object} props
+     *      Component properties object
+     */
+    function ToggleSwitch(props) {
+        _classCallCheck(this, ToggleSwitch);
+
+        // Set initial state
+        var _this = _possibleConstructorReturn(this, (ToggleSwitch.__proto__ || Object.getPrototypeOf(ToggleSwitch)).call(this, props));
+        // Call super constructor
+
+
+        _this.state = {
+            label: _this.props.label,
+            title: _this.props.title,
+            value: _this.props.value === true ? true : false
+        };
+
+        // Bind the update function
+        _this.doUpdate = _this.doUpdate.bind(_this);
+        return _this;
+    }
+
+    /**
+     * Update event listener for the input field.
+     *
+     * @param {object} event
+     *      Event object handler
+     */
+
+
+    _createClass(ToggleSwitch, [{
+        key: "doUpdate",
+        value: function doUpdate(event) {
+            // Get current state
+            var curr = this.state;
+
+            // Update value
+            curr.value = !curr.value;
+
+            // Is there an onChange callback? Then execute
+            if (this.props.onChange) {
+                // onChange should accept the `title` and `value` params
+                this.props.onChange(curr.title, curr.value);
+            }
+
+            // Update state
+            this.setState(curr);
+        }
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+
+    }, {
+        key: "render",
+        value: function render() {
+            // Get current state and defines properties
+            var curr = this.state;
+            var prop = {};
+
+            // Build properties
+            prop.checked = curr.value;
+            prop.value = "Switch";
+
+            // Render component
+            return _react2.default.createElement(
+                "div",
+                { className: "tool__form-toggle" },
+                _react2.default.createElement(
+                    "label",
+                    null,
+                    curr.label,
+                    _react2.default.createElement("input", _extends({ type: "checkbox" }, prop, { onChange: this.doUpdate })),
+                    _react2.default.createElement("span", null)
+                )
+            );
+        }
+    }]);
+
+    return ToggleSwitch;
+}(_react.Component);
+
+exports.default = ToggleSwitch;
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Components/LinkButton
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Button with an action attribute, for which a function can be assigned to.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * If no action is assigned, this button become useless.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+// Import base modules
+
+
+// Main component class
+var LinkButton = function (_Component) {
+    _inherits(LinkButton, _Component);
+
+    /**
+     * Component constructor.
+     *
+     * @param {object} props
+     *      Component properties object
+     */
+    function LinkButton(props) {
+        _classCallCheck(this, LinkButton);
+
+        // Set initial state
+        var _this = _possibleConstructorReturn(this, (LinkButton.__proto__ || Object.getPrototypeOf(LinkButton)).call(this, props));
+        // Call super constructor
+
+
+        _this.state = {
+            className: _this.props.className || "",
+            action: _this.props.action
+        };
+
+        // Bind redirect
+        _this.doAction = _this.doAction.bind(_this);
+        return _this;
+    }
+
+    /**
+     * Executes the action prop function, if assigned.
+     */
+
+
+    _createClass(LinkButton, [{
+        key: "doAction",
+        value: function doAction() {
+            // If there's an action assigned to this button, execute it
+            if (this.state.action) {
+                this.state.action();
+            }
+        }
+    }, {
+        key: "render",
+
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+        value: function render() {
+            // Get current state and properties handler
+            var curr = this.state;
+            var buttonProp = {};
+
+            // Build properties
+            if (curr.className != "") buttonProp.className = curr.className;
+
+            // Return component
+            return _react2.default.createElement(
+                "button",
+                _extends({}, buttonProp, { onClick: this.doAction, type: "button" }),
+                this.props.children
+            );
+        }
+    }]);
+
+    return LinkButton;
+}(_react.Component);
+
+exports.default = LinkButton;
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(38);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * DBFORGE TOOL : Base/ToolHeader
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ======================================================================
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * A button that works like the Link object from "react-router-dom".
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You only need to pass a "to" parameter, with className being optional.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * ----------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author      Fabio Y. Goto <lab@yuiti.com.br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @since       3.0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+// Import base module
+
+
+// Main component class
+var ToolHeader = function (_Component) {
+    _inherits(ToolHeader, _Component);
+
+    function ToolHeader() {
+        _classCallCheck(this, ToolHeader);
+
+        return _possibleConstructorReturn(this, (ToolHeader.__proto__ || Object.getPrototypeOf(ToolHeader)).apply(this, arguments));
+    }
+
+    _createClass(ToolHeader, [{
+        key: "render",
+
+        /**
+         * Renders the component.
+         *
+         * @returns {XML}
+         */
+        value: function render() {
+            var _now = void 0;
+            return _react2.default.createElement(
+                "header",
+                null,
+                "Hello"
+            );
+        }
+    }]);
+
+    return ToolHeader;
+}(_react.Component);
+
+// Export component
+
+
+exports.default = (0, _reactRouterDom.withRouter)(ToolHeader);
 
 /***/ })
 /******/ ]);

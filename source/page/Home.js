@@ -10,8 +10,10 @@
 import React, { Component } from "react";
 
 // Import application components
+import ActionButton from "Components/ActionButton";
 import LinkButton from "Components/LinkButton";
 import TextInput from "Components/TextInput";
+import ToggleSwitch from "Components/ToggleSwitch";
 
 // Main component class
 export default class Home extends Component {
@@ -28,6 +30,13 @@ export default class Home extends Component {
         // Set initial state
         this.state = {};
     }
+
+    /**
+     * This is just a test action, which logs something to the console.
+     */
+    testAction() {
+        console.log("Hello from the Test Action!");
+    }
     
     /**
      * Renders the component.
@@ -41,6 +50,10 @@ export default class Home extends Component {
                 <LinkButton className="hello-dumbo" to="/edit">
                     I am a Button
                 </LinkButton>
+                <ActionButton action={this.testAction}>
+                    No Action! :(
+                </ActionButton>
+                <ToggleSwitch label="Oi?" title="gogo" value={true}/>
                 <TextInput label="Hello" title="demo" value="Namu"/>
             </div>
         );

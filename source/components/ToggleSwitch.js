@@ -1,16 +1,17 @@
 /**
- * DBFORGE TOOL : Components/TextInput
+ * DBFORGE TOOL : Components/ToggleSwitch
  * ======================================================================
- * Text Input component, wrapped in a div with a label.
+ * Toggle switch for boolean values, using a checkbox, wrapped in a div 
+ * with a label.
  * ----------------------------------------------------------------------
  * @author      Fabio Y. Goto <lab@yuiti.com.br>
  * @since       3.0.0
  */
-// Import base modules
+// Import bae module
 import React, { Component } from "react";
 
 // Main component class
-export default class TextInput extends Component {
+export default class ToggleSwitch extends Component {
     /**
      * Component constructor.
      *
@@ -25,7 +26,7 @@ export default class TextInput extends Component {
         this.state = {
             label: this.props.label,
             title: this.props.title,
-            value: this.props.value
+            value: (this.props.value === true) ? true : false
         };
         
         // Bind the update function
@@ -43,7 +44,7 @@ export default class TextInput extends Component {
         let curr = this.state;
         
         // Update value
-        curr.value = event.target.value;
+        curr.value = !curr.value;
         
         // Is there an onChange callback? Then execute
         if (this.props.onChange) {
@@ -54,21 +55,29 @@ export default class TextInput extends Component {
         // Update state
         this.setState(curr);
     }
-    
+
     /**
      * Renders the component.
      *
      * @returns {XML}
      */
     render() {
-        // Return component
-        return (
-            <div className="tool__form-fields">
-                <label>{this.state.label}</label>
-                <input type="text"
-                       title={this.state.title}
-                       value={this.state.value}
-                       onChange={this.doUpdate}/>
+        // Get current state and defines properties
+        let curr = this.state;
+        let prop = {};
+
+        // Build properties
+        prop.checked = curr.value;
+        prop.value = "Switch";
+
+        // Render component
+        return(
+            <div className="tool__form-toggle">
+                <label>
+                    {curr.label}
+                    <input type="checkbox" {...prop} onChange={this.doUpdate}/>
+                    <span></span>
+                </label>
             </div>
         );
     }

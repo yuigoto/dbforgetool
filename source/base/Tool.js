@@ -13,6 +13,7 @@ import { Route } from "react-router-dom";
 
 // Import application components
 import { AppRoute } from "Routes/Routes";
+import Header from "Base/ToolHeader";
 import Home from "Page/Home";
 import Edit from "Page/Edit";
 
@@ -74,6 +75,7 @@ export default class Tool extends Component {
         // Render the component
         return (
             <div className="tool__wrap">
+                <Header />
                 {routes}
             </div>
         );

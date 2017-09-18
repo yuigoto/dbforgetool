@@ -1,19 +1,18 @@
 /**
  * DBFORGE TOOL : Components/LinkButton
  * ======================================================================
- * A button that works like the Link object from "react-router-dom".
- *
- * You only need to pass a "to" parameter, with className being optional.
+ * Button with an action attribute, for which a function can be assigned to.
+ * 
+ * If no action is assigned, this button become useless.
  * ----------------------------------------------------------------------
  * @author      Fabio Y. Goto <lab@yuiti.com.br>
  * @since       3.0.0
  */
 // Import base modules
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
 
 // Main component class
-class LinkButton extends Component {
+export default class LinkButton extends Component {
     /**
      * Component constructor.
      *
@@ -27,30 +26,20 @@ class LinkButton extends Component {
         // Set initial state
         this.state = {
             className: this.props.className || "",
-            redirect: false,
-            to: this.props.to
+            action: this.props.action 
         };
-        
+
         // Bind redirect
-        this.redirectTo = this.redirectTo.bind(this);
+        this.doAction = this.doAction.bind(this);
     }
     
     /**
-     * Redirects to the given route.
+     * Executes the action prop function, if assigned.
      */
-    redirectTo() {
-        // Get current state
-        let curr = this.state;
-        
-        // Redirects only if the "to" param is set
-        if (curr.to != "") {
-            this.props.history.push(curr.to);
-    
-            // Update redirect status
-            curr.redirect = true;
-    
-            // Update state
-            this.setState(curr);
+    doAction() {
+        // If there's an action assigned to this button, execute it
+        if (this.state.action) {
+            this.state.action();
         }
     };
     
@@ -69,12 +58,9 @@ class LinkButton extends Component {
         
         // Return component
         return (
-            <button {...buttonProp} onClick={this.redirectTo} type="button">
+            <button {...buttonProp} onClick={this.doAction} type="button">
                 {this.props.children}
             </button>
         );
     }
 }
-
-// Export with Router props
-export default withRouter(LinkButton);
