@@ -8,10 +8,10 @@
  */
 // Import base modules
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 // Import application components
 import LinkButton from "Components/LinkButton";
+import Stacks from "Helper/Stacks";
 
 // Main component class
 export default class Edit extends Component {
@@ -25,8 +25,17 @@ export default class Edit extends Component {
         // Call super constructor
         super(props);
         
+        let id = this.props.match.params.blueprint_id || "";
+        
+        // Create a stack instance
+        this.stacks = new Stacks("dbforge_stack");
+        
         // Set initial state
-        this.state = {};
+        this.state = {
+            data: this.stacks.select(id)
+        };
+        
+        console.log(this.state.data);
     }
     
     /**

@@ -163,12 +163,12 @@ export default class Stacks {
      */
     makeFile(data) {
         // Set exported file name and extension
-        let file_name = data.blueprint.name || "dummy";
+        let file_name = data.name || "dummy";
         let file_extn = ".dbforge";
         
         // Create file blob
         const blob = new Blob(
-            [JSON.stringify(data.blueprint)],
+            [JSON.stringify(data)],
             {type: "text/text"}
         );
         
