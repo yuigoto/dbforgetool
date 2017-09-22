@@ -94,6 +94,9 @@ export default class Stacks {
             
             // Update local storage
             this.updateStorage();
+            
+            // Return true
+            return true;
         }
     }
     
@@ -121,6 +124,7 @@ export default class Stacks {
                 return true;
             }
         }
+        
         // As a fallback, add the item to storage
         return this.create(data);
     }

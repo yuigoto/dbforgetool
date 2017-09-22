@@ -32,6 +32,7 @@ export default class Edit extends Component {
         
         // Set initial state
         this.state = {
+            load: (id == "") ? false : true,
             data: this.stacks.select(id)
         };
         
@@ -44,9 +45,14 @@ export default class Edit extends Component {
      * @returns {XML}
      */
     render() {
+        // Define the application title
+        let name = (this.state.load)
+            ? "Editing: " + this.state.data.name
+            : "New Blueprint";
+        
         return (
             <div className="tool__home">
-                <p>Edit</p>
+                <p>{name}</p>
                 <LinkButton className="hello-dumbo" to="/">
                     Home
                 </LinkButton>

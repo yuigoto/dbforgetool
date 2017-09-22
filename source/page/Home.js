@@ -73,11 +73,14 @@ export default class Home extends Component {
         return (
             <div className="tool__home">
                 <h4>Home</h4>
+                <LinkButton className="hello-dumbo" to="/edit">
+                    New Blueprint
+                </LinkButton>
                 <LinkButton className="hello-dumbo" to="/load">
-                    Load
+                    Load Blueprint
                 </LinkButton>
                 <LinkButton className="hello-dumbo" to="/edit">
-                    I am a Button
+                    edit
                 </LinkButton>
                 <ActionButton action={this.testAction}>
                     No Action! :(
