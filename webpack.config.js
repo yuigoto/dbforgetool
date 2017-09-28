@@ -18,7 +18,7 @@ const CopyWebpack = require("copy-webpack-plugin");
 // Set Webpack Config
 module.exports = {
     entry: [
-        "./source/Main.js",
+        "./src/Main.js",
         "./source/scss/main.scss"
     ],
     output: {
@@ -80,6 +80,7 @@ module.exports = {
     resolve: {
         // Resolve path alias, so we don't have to put "../", etc.
         alias: {
+            src: path.resolve(__dirname, "src"),
             Base: path.resolve(__dirname, "source/base"), 
             Page: path.resolve(__dirname, "source/page"),
             Helper: path.resolve(__dirname, "source/helper"),
