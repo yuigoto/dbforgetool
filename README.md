@@ -1,5 +1,4 @@
-YX : JS : DBForge Tool
-======================
+# DBForge Tool
 
 > A simple tool built to help make field arrays for use in DBForge, on CodeIgniter projects.
 
@@ -11,7 +10,9 @@ Bear in mind that I'm not a great coder, and this is just a simple tool built to
 
 Use this at your own risk! :sweat_smile::sweat_drops:
 
-## How to Use
+----------------------------------------------------------------------
+
+## How To
 
 You should use the binary release or run the source code with **NW.js/Node Webkit**. You can just run this as a web app, but you won't be able to save the generated data in a file.
 
@@ -41,18 +42,18 @@ By doing this, you'll have an array containing some nested arrays and values. Ea
 
 I've written a simple Gist, containing a dummy model to exemplify how you'd use this class, you can find it here: [https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15](https://gist.github.com/yuigoto/f87acc9bea12d0a1a827072f0e1bbb15)
 
+----------------------------------------------------------------------
+
 ## Authors
 
-- **Fabio Y. Goto** ([lab@yuiti.com.br][mailto01]);
+See `AUTHORS.md` for more information.
+
+----------------------------------------------------------------------
 
 ## License
 
-The code/logic in this repo is distributed under the `MIT License`, plase check the `LICENSE.md` file.
+This project is licensed under the `MIT License`. See `LICENSE.md` for more details on the subjects of the license.
 
-_© 2016 Fabio Y. Goto_
+----------------------------------------------------------------------
 
-[\\]: ======================================================================
-
-[mailto01]: mailto:lab@yuiti.com.br
-
-[\\]: ======================================================================
+_©2016-2020 Fabio Y. Goto_
