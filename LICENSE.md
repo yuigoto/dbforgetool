@@ -1,23 +1,25 @@
-THE YX PROJECT LICENSE (Yuiti's Cross Project License)
-======================================================
+The MIT License (MIT)
+=====================
 
-	(c) 2017 Fabio Y. Goto
+Copyright © `2017-2020` `Fabio Y. Goto`
 
-_Version 0.0.1_
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the “Software”), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
 
-> A not-so-open license that was made so I can have closed-source projects, while also maintaining a more controlled openness (because I don't like having a mess with too many forks).
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-The **YX Project License** states that the contents of this project should **NOT** be made available to the public, but that doesn't mean isn't a fully closed project.
-
-This license, while made to let me properly have a license for closed projects, was also made so I could have a more controlled _open_ environment for my code, which means:
-
-- Not too many (or any) forks of my project, as I don't want, and don't want to make, a mess out of my (and anyone's) code;
-- Request to the repository are made on a _per request_ basis to the [owner's e-mail address][mailto01], but once you're in, you're free to go;
-- Invited users **cannot** invite other users, but can point to the owner's e-mail so others can request access;
-- Access to the code isn't guaranteed to everyone, writing a proper request and _justifying_ your reasons to have access might help;
-- Users with access can use anything in their own projects (personal or commercial), **BUT** cannot mention the existence of this repository, neither point to the address of this publicly;
-- Crediting is appreciated, _but credit the author's name only_, not the repo link;
-
-[\\]: ======================================================================
-
-[mailto01]: mailto:lab@yuiti.com.br
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
